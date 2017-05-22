@@ -4,6 +4,7 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
 
   def setup
     @user = users(:michael)
+    @other_user = users(:archer)
   end
 
   test "login with invalid information" do
@@ -25,4 +26,10 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     assert_select "a[href=?]", root_path, count: 2
     assert_select "a[href=?]", logout_path, count: 1
   end
+
+  test "should not show home page without login" do
+    get root_path
+    assert_redirected_to login_path
+  end
+
 end
