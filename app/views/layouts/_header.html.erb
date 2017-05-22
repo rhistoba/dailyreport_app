@@ -3,9 +3,12 @@
     <%= link_to "日報システム", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "日報一覧", root_path %></li>
+        <li><%= link_to "ホーム", root_path %></li>
         <% if logged_in? %>
+          <li><%= link_to "日報作成", '#' %></li>
           <li><%= link_to "ログアウト", logout_path, method: "delete" %></li>
+        <% else %>
+          <li><%= link_to "ログイン", login_path %></li>
         <% end %>
       </ul>
     </nav>
