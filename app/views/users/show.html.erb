@@ -1,5 +1,17 @@
 <% provide(:title, @user.name) %>
-<ul>
-  <li><%= @user.name %></li>
-  <li><%= @user.email %></li>
-</ul>
+<div class="col-md-8">
+  <h3>ユーザー情報</h3>
+  <ul>
+    <li><%= @user.name %></li>
+    <li><%= @user.email %></li>
+  </ul>
+</div>
+<div class="col-md-8">
+  <% if @user.reports.any? %>
+      <h3>日報</h3>
+      <ul>
+        <%= render @reports %>
+      </ul>
+      <%= will_paginate @reports %>
+  <% end %>
+</div>

@@ -30,3 +30,14 @@ User.create!(
           password: password,
           password_confirmation: password)
 end
+
+users = User.order(:created_at).take(10)
+users.each do |user|
+  date = Time.local(2016,12,31)
+  50.times do
+    date = date.next_day
+    title = Faker::Lorem.sentence(1)
+    content = Faker::Lorem.sentence(5)
+    user.reports.create!(date: date, title: title, content: content)
+  end
+end

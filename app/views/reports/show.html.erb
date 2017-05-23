@@ -1,0 +1,14 @@
+<% provide(:title, @report.title) %>
+<div class="col-md-8">
+  <h3><%= @report.title %></h3>
+  <p><%= @report.user.name %></p>
+  <p><%= @report.date %></p>
+  <p>
+    <%= @report.content %>
+  </p>
+  <% if @report.user_id == current_user.id %>
+      <p><%= link_to '内容の変更', edit_report_path %></p>
+      <p><%= link_to 'この日報を削除する', report_path, method: :delete,
+                     data: { confirm: "本当によろしいですか？" } %></p>
+  <% end %>
+</div>
