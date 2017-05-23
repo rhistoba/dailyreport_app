@@ -1,2 +1,11 @@
 <h1>ホーム画面</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<div class="col-md-8">
+  <% if @user.reports.any? %>
+      <h3>日報</h3>
+      <ul>
+        <%= render @feed_items %>
+      </ul>
+      <%= will_paginate @feed_items %>
+  <% end %>
+</div>
+

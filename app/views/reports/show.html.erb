@@ -6,7 +6,7 @@
   <p>
     <%= @report.content %>
   </p>
-  <% if @report.user_id == current_user.id %>
+  <% if @report.user == current_user %>
       <p><%= link_to '内容の変更', edit_report_path %></p>
       <p><%= link_to 'この日報を削除する', report_path, method: :delete,
                      data: { confirm: "本当によろしいですか？" } %></p>
