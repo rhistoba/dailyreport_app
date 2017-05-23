@@ -48,7 +48,7 @@ class ReportsController < ApplicationController
   # beforeアクション
   def correct_user
     @report = Report.find(params[:id])
-    redirect_to(root_url) unless @report.user_id == current_user.id
+    redirect_to(root_url) unless @report.user == current_user
   end
 
 end
