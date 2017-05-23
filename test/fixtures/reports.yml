@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+user2_one:
+  date: 2017-05-20
+  title: "Title 1"
+  content: "Content 1"
+  user: archer
+
+user2_two:
+  date: 2017-05-21
+  title: "Title 2"
+  content: "Content 2"
+  user: archer
+
+user2_most_recent:
+  date: 2017-05-22
+  title: "Title 3"
+  content: "Content 3"
+  user: archer

@@ -37,4 +37,14 @@ class UserTest < ActiveSupport::TestCase
     @user.password = @user.password_confirmation = "a" * 5
     assert_not @user.valid?
   end
+
+  test "associated reports should be destroyed" do
+    @user.save
+    @user.reports.create!(date:Time.now, title:"1",
+                          content:"1", user_id:@user.id)
+    assert_difference 'Report.count', -1 do
+      @user.destroy
+    end
+  end
+
 end
