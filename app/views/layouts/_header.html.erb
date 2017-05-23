@@ -5,8 +5,8 @@
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "ホーム", root_path %></li>
         <% if logged_in? %>
+            <li><%= link_to "ユーザー一覧", users_path %></li>
             <% if current_user.admin? %>
-                <li><%= link_to "ユーザー一覧", users_path %></li>
                 <li><%= link_to "新規ユーザー作成", new_user_path %></li>
             <% end %>
             <li><%= link_to "日報作成", '#' %></li>

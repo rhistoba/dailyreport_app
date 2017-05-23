@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :logged_in_user
-  before_action :admin_user
+  before_action :admin_user, only: [:new, :create, :edit, :update, :destroy]
 
   def index
     @users = User.paginate(page: params[:page])
@@ -18,7 +18,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:info] = "新しいユーザー" + @user.name + "を作成しました"
-      redirect_to root_url
+      redirect_to users_url
     else
       render 'new'
     end
@@ -30,10 +30,12 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    flash[:success] = "ユーザー情報を更新しました"
-    redirect_to @user
-  else
-    render 'edit'
+    if @user.update_attributes(user_params)
+      flash[:success] = "ユーザー情報を更新しました"
+      redirect_to @user
+    else
+      render 'edit'
+    end
   end
 
   def destroy

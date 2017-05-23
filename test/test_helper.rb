@@ -10,13 +10,16 @@ class ActiveSupport::TestCase
   include ApplicationHelper
 
   # テストユーザーとしてログインする
-  def log_in_as(user)
-    session[:user_id] = user.id
+  def log_in_as(user, password='')
+    #session[:user_id] = user.id
+    get login_path
+    post login_path params: {
+        session: { email: user.email, password: password } }
   end
 
-  # テストユーザーがログイン中の場合にtrueを返す
-  def is_logged_in?
-    !session[:user_id].nil?
+  # ログアウトする
+  def log_out
+    delete logout_path
   end
 
 
