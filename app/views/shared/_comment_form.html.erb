@@ -4,7 +4,8 @@
     <%= f.hidden_field :report_id, value: @report.id %>
 
     <%= f.text_area :content, class: 'form-control',
-                    placeholder: 'コメントを入力してください' %>
+                    placeholder: 'コメントを入力してください',
+                    rows: 5%>
 
     <%= f.submit yield(:button_text), class: "btn btn-primary" %>
 <% end %>

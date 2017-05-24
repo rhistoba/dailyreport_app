@@ -1,10 +1,27 @@
 <% provide(:title, @report.title) %>
 <% provide(:button_text, 'コメントする') %>
-<div class="col-md-8">
-  <h3><%= @report.title %></h3>
-  <p><%= @report.user.name %></p>
-  <p><%= @report.date %></p>
-  <p><%= @report.content %></p>
+<div class="col-md-10 col-md-offset-1">
+  <h3>日報の内容</h3>
+  <table class="table">
+    <tbody>
+    <tr>
+      <th width="120">タイトル</th>
+      <td><%= @report.title %></td>
+    </tr>
+    <tr>
+      <th>ユーザー名</th>
+      <td><%= @report.user.name %></td>
+    </tr>
+    <tr>
+      <th>日付</th>
+      <td><%= @report.date %></td>
+    </tr>
+    <tr>
+      <th>内容</th>
+      <td><%= @report.content %></td>
+    </tr>
+    </tbody>
+  </table>
 
   <% if @report.user == current_user %>
       <p><%= link_to '内容の変更', edit_report_path %></p>
@@ -12,23 +29,24 @@
                      data: { confirm: "本当によろしいですか？" } %></p>
   <% end %>
 
-  <section class="comments">
-    <% if @comments.any? %>
-        <ul>
-          <% @comments.each do |comment| %>
-              <li>
-                <%= comment.user.name + ' | ' + comment.content %>
-                <% if current_user?(comment.user) %>
-                    <%= link_to "削除する", comment, method: :delete,
-                                data: { confirm: "本当に削除しますか？" } %>
-                <% end %>
-              </li>
-          <% end %>
-        </ul>
-    <% else %>
-        <p>コメントはまだありません</p>
+  <h3>コメント</h3>
+  <table class="table">
+    <tbody>
+    <% @comments.each do |comment| %>
+    <tr>
+      <td width="120"><%= comment.user.name %></td>
+      <td><%= comment.content %></td>
+      <td width="150"><%= time_ago_in_words(comment.created_at) + ' ago' %></td>
+      <% if current_user?(comment.user) %>
+          <td width="50"><%= link_to "削除", comment, method: :delete,
+                          data: { confirm: "本当に削除しますか？" } %></td>
+      <% else %>
+          <td width="50"></td>
+      <% end %>
+    </tr>
     <% end %>
-  </section>
+    </tbody>
+  </table>
 
   <section class="comment_form">
     <%= render 'shared/comment_form' %>

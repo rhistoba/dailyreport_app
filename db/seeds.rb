@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create!(
+user_admin = User.create!(
         name: "Example User",
         email: "user@example.com",
         password: "foobar",
@@ -40,7 +40,16 @@ users.each do |user|
   50.times do
     date = date.next_day
     title = Faker::Lorem.sentence(1)
-    content = Faker::Lorem.sentence(5)
+    content = Faker::Lorem.sentence(50)
     user.reports.create!(date: date, title: title, content: content)
+  end
+end
+
+reports = Report.order(:date).take(30)
+reports.each do |report|
+  (1..4).each do |i|
+    user = i.odd? ? user_admin : report.user
+    content = Faker::Lorem.sentence(10)
+    user.comments.create!(content: content, report_id: report.id)
   end
 end

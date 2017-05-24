@@ -1,15 +1,6 @@
-<li id="report-<%= report.id %>">
-  <span class="date"><%= report.date %></span>
-   |
-  <span class="name">
-    <%= link_to report.user.name, user_path(report) %>
-  </span>
-   |
-  <span class="title">
-    <%= link_to report.title, report_path(report) %>
-  </span>
-   -
-  <span class="comment">
-    <%= "comment: #{report.comments.count}" %>
-  </span>
-</li>
+<tr>
+  <td><%= report.date.to_s %></td>
+  <td><%= link_to report.user.name, user_path(report) %></td>
+  <td><%= link_to report.title, report_path(report) %></td>
+  <td><%= report.comments.count.to_s %></td>
+</tr>

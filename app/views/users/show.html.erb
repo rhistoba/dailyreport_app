@@ -1,18 +1,37 @@
 <% provide(:title, @user.name) %>
-<div class="col-md-8">
+<div class="col-md-4 col-md-offset-1">
   <h3>ユーザー情報</h3>
-  <ul>
-    <li><%= @user.name %></li>
-    <li><%= @user.email %></li>
-    <li><%= @user.department %></li>
-  </ul>
+  <table class="table table-bordered">
+    <tbody>
+    <tr>
+      <th width="120">ユーザー名</th>
+      <td><%= @user.name %></td>
+    </tr>
+    <tr>
+      <th>メールアドレス</th>
+      <td><%= @user.email %></td>
+    </tr>
+    <tr>
+      <th>所属部署</th>
+      <td><%= @user.department %></td>
+    </tr>
+    </tbody>
+  </table>
 </div>
-<div class="col-md-8">
-  <% if @user.reports.any? %>
-      <h3>日報</h3>
-      <ul>
-        <%= render @reports %>
-      </ul>
-      <%= will_paginate @reports %>
-  <% end %>
+<div class="col-md-10 col-md-offset-1">
+  <h3>作成した日報</h3>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>日付</th>
+      <th>ユーザー</th>
+      <th>タイトル</th>
+      <th>コメント数</th>
+    </tr>
+    </thead>
+    <tbody>
+    <%= render @reports %>
+    </tbody>
+  </table>
+  <%= will_paginate @reports %>
 </div>

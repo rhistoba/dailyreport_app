@@ -1,16 +1,29 @@
 <% provide(:title, "ユーザー一覧") %>
-<h1>ユーザー一覧</h1>
-
-<%= will_paginate %>
-
-<ul class="users">
-  <% @users.each do |user| %>
-      <%= link_to user.name, user %>
+<div class="col-md-4 col-md-offset-1">
+  <h3>ユーザー一覧</h3>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>ユーザー名</th>
       <% if current_user.admin? %>
-          | <%= link_to "edit", edit_user_path(user) %>
-          | <%= link_to "delete", user, method: :delete,
-                        data: { confirm: "本当に削除しますか？" } %>
+          <th></th>
+          <th></th>
       <% end %>
-      <br>
-  <% end %>
-</ul>
+    </tr>
+    </thead>
+    <tbody>
+    <% @users.each do |user| %>
+    <tr>
+      <td><%= link_to user.name, user_path(user) %></td>
+      <% if current_user.admin? %>
+          <td><%= link_to '編集', edit_user_path(user) %></td>
+          <td><%= link_to '削除', user_path(user), method: 'delete' %></td>
+      <% end %>
+    </tr>
+    <% end %>
+    </tbody>
+  </table>
+  <%= will_paginate %>
+</div>
+
+
