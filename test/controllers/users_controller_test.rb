@@ -18,7 +18,8 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
 
   test "only admin user can create and delete user" do
     new_user = {name: "Hoge Hoge", email: "hoge@example.com",
-                password: "foobar", password_confirmation: "foobar"}
+                password: "foobar", password_confirmation: "foobar",
+                department: "Department"}
 
     log_in_as(@not_admin_user, 'password')
     assert_no_difference 'User.count' do

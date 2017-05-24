@@ -4,7 +4,8 @@ class UserTest < ActiveSupport::TestCase
 
   def setup
     @user = User.new(name: "Example User", email: "user@example.com",
-                     password: "foobar", password_confirmation: "foobar")
+                     password: "foobar", password_confirmation: "foobar",
+                     department: "Management")
   end
 
   test "should be valid" do
@@ -45,6 +46,18 @@ class UserTest < ActiveSupport::TestCase
     assert_difference 'Report.count', -1 do
       @user.destroy
     end
+  end
+
+  test 'department must not be nil' do
+    @user.department = nil
+    assert_not @user.valid?
+  end
+
+  test 'department length must be maximum 50' do
+    @user.department = 'あ' * 50
+    assert @user.valid?
+    @user.department = 'あ' * 51
+    assert_not@user.valid?
   end
 
 end
