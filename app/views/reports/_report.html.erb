@@ -8,4 +8,8 @@
   <span class="title">
     <%= link_to report.title, report_path(report) %>
   </span>
+   -
+  <span class="comment">
+    <%= "comment: #{report.comments.count}" %>
+  </span>
 </li>

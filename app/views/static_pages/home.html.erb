@@ -1,11 +1,9 @@
 <h1>ホーム画面</h1>
 <div class="col-md-8">
-  <% if @user.reports.any? %>
-      <h3>日報</h3>
-      <ul>
-        <%= render @feed_items %>
-      </ul>
-      <%= will_paginate @feed_items %>
-  <% end %>
+  <h3>日報</h3>
+  <ul>
+    <%= render @feed_items %>
+  </ul>
+  <%= will_paginate @feed_items %>
 </div>
 

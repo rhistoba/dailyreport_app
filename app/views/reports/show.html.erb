@@ -1,14 +1,36 @@
 <% provide(:title, @report.title) %>
+<% provide(:button_text, 'コメントする') %>
 <div class="col-md-8">
   <h3><%= @report.title %></h3>
   <p><%= @report.user.name %></p>
   <p><%= @report.date %></p>
-  <p>
-    <%= @report.content %>
-  </p>
+  <p><%= @report.content %></p>
+
   <% if @report.user == current_user %>
       <p><%= link_to '内容の変更', edit_report_path %></p>
       <p><%= link_to 'この日報を削除する', report_path, method: :delete,
                      data: { confirm: "本当によろしいですか？" } %></p>
   <% end %>
+
+  <section class="comments">
+    <% if @comments.any? %>
+        <ul>
+          <% @comments.each do |comment| %>
+              <li>
+                <%= comment.user.name + ' | ' + comment.content %>
+                <% if current_user?(comment.user) %>
+                    <%= link_to "削除する", comment, method: :delete,
+                                data: { confirm: "本当に削除しますか？" } %>
+                <% end %>
+              </li>
+          <% end %>
+        </ul>
+    <% else %>
+        <p>コメントはまだありません</p>
+    <% end %>
+  </section>
+
+  <section class="comment_form">
+    <%= render 'shared/comment_form' %>
+  </section>
 </div>
