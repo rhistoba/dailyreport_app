@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="b12929bf-7565-4e07-84b1-b7c1d1613e22" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/report.rb" afterPath="$PROJECT_DIR$/app/models/report.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/comments.yml" afterPath="$PROJECT_DIR$/test/fixtures/comments.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/comment_test.rb" afterPath="$PROJECT_DIR$/test/models/comment_test.rb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -20,11 +23,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="comment.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="comment.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/comment.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="15">
+              <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="report.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/report.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="18" lean-forward="true" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -33,18 +46,28 @@
       <file leaf-file-name="user.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/user.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="62" lean-forward="false" selection-start-line="11" selection-start-column="62" selection-end-line="11" selection-end-column="62" />
+            <state relative-caret-position="30">
+              <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="comment_test.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="comment_test.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/models/comment_test.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="23" column="4" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+            <state relative-caret-position="375">
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="comments.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/fixtures/comments.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="88" lean-forward="false" selection-start-line="0" selection-start-column="88" selection-end-line="0" selection-end-column="88" />
               <folding />
             </state>
           </provider>
@@ -84,7 +107,6 @@
         <option value="$PROJECT_DIR$/test/test_helper.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20170523024050_create_reports.rb" />
         <option value="$PROJECT_DIR$/test/fixtures/reports.yml" />
-        <option value="$PROJECT_DIR$/app/models/report.rb" />
         <option value="$PROJECT_DIR$/test/models/report_test.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
         <option value="$PROJECT_DIR$/app/views/reports/edit.html.erb" />
@@ -103,14 +125,16 @@
         <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/users/show.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20170524002201_add_department_to_users.rb" />
-        <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/test/models/user_test.rb" />
         <option value="$PROJECT_DIR$/app/views/users/_form.html.erb" />
         <option value="$PROJECT_DIR$/test/fixtures/users.yml" />
         <option value="$PROJECT_DIR$/test/controllers/users_controller_test.rb" />
         <option value="$PROJECT_DIR$/app/views/sessions/new.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20170524010953_create_comments.rb" />
+        <option value="$PROJECT_DIR$/test/fixtures/comments.yml" />
+        <option value="$PROJECT_DIR$/app/models/report.rb" />
         <option value="$PROJECT_DIR$/app/models/comment.rb" />
+        <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/test/models/comment_test.rb" />
       </list>
     </option>
@@ -167,7 +191,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value="user.rb&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/models/user.rb&#10;comment_test.rb&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/models/comment_test.rb&#10;create_re&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/db/migrate/20170523024050_create_reports.rb&#10;create_com&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/db/migrate/20170524010953_create_comments.rb&#10;comment.rb&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/models/comment.rb&#10;new.ht&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/sessions/new.html.erb&#10;session&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/controllers/sessions_controller.rb&#10;usersym&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/fixtures/users.yml&#10;edit&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/users/edit.html.erb&#10;_form&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/users/_form.html.erb&#10;new.html&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/users/new.html.erb&#10;user_test&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/models/user_test.rb&#10;_test&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/controllers/users_controller_test.rb&#10;show.html&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/users/show.html.erb&#10;users_con&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/controllers/users_controller.rb&#10;seed&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/db/seeds.rb&#10;add user&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/db/migrate/20170522074705_add_admin_to_users.rb&#10;createt_&#9;FILE&#9;file:///Users/stoba/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.0.0.1/lib/rails/generators/active_record/migration/templates/create_table_migration.rb&#10;user test&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/controllers/users_controller_test.rb&#10;reports.yml&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/fixtures/reports.yml&#10;users.yml&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/fixtures/users.yml&#10;routes&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/config/routes.rb&#10;con&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/controllers/reports_controller.rb&#10;co&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/controllers/reports_controller_test.rb&#10;home&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/static_pages/home.html.erb&#10;stati&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/controllers/static_pages_controller.rb&#10;show&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/reports/show.html.erb&#10;create&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/db/migrate/20170523024050_create_reports.rb&#10;_report&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/reports/_report.html.erb&#10;_header&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/layouts/_header.html.erb&#10;user&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/controllers/users_controller.rb&#10;show.htm&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/reports/show.html.erb&#10;static&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/controllers/static_pages_controller.rb&#10;index&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/users/index.html.erb&#10;home.html.erb&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/static_pages/home.html.erb&#10;reports_cont&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/controllers/reports_controller_test.rb&#10;cont&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/controllers/reports_controller.rb&#10;new&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/users/new.html.erb&#10;routes.rb&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/config/routes.rb&#10;reports_con&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/controllers/reports_controller.rb&#10;_&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/reports/_report.html.erb&#10;seeds&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/db/seeds.rb&#10;report test&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/models/report_test.rb&#10;report_test&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/models/report_test.rb&#10;report.rb&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/models/report.rb&#10;_heade&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/layouts/_header.html.erb&#10;_helper&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/helpers/application_helper.rb&#10;show.&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/users/show.html.erb&#10;seed.&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/db/seeds.rb&#10;test_help&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/test_helper.rb" />
+    <property name="SearchEverywhereHistoryKey" value="report_test&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/models/report_test.rb&#10;comments.y&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/fixtures/comments.yml&#10;report.rb&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/models/report.rb&#10;user.rb&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/models/user.rb&#10;comment_test.rb&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/models/comment_test.rb&#10;create_re&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/db/migrate/20170523024050_create_reports.rb&#10;create_com&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/db/migrate/20170524010953_create_comments.rb&#10;comment.rb&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/models/comment.rb&#10;new.ht&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/sessions/new.html.erb&#10;session&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/controllers/sessions_controller.rb&#10;usersym&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/fixtures/users.yml&#10;edit&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/users/edit.html.erb&#10;_form&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/users/_form.html.erb&#10;new.html&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/users/new.html.erb&#10;user_test&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/models/user_test.rb&#10;_test&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/controllers/users_controller_test.rb&#10;show.html&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/users/show.html.erb&#10;users_con&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/controllers/users_controller.rb&#10;seed&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/db/seeds.rb&#10;add user&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/db/migrate/20170522074705_add_admin_to_users.rb&#10;createt_&#9;FILE&#9;file:///Users/stoba/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.0.0.1/lib/rails/generators/active_record/migration/templates/create_table_migration.rb&#10;user test&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/controllers/users_controller_test.rb&#10;reports.yml&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/fixtures/reports.yml&#10;users.yml&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/fixtures/users.yml&#10;routes&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/config/routes.rb&#10;con&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/controllers/reports_controller.rb&#10;co&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/controllers/reports_controller_test.rb&#10;home&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/static_pages/home.html.erb&#10;stati&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/controllers/static_pages_controller.rb&#10;show&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/reports/show.html.erb&#10;create&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/db/migrate/20170523024050_create_reports.rb&#10;_report&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/reports/_report.html.erb&#10;_header&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/layouts/_header.html.erb&#10;user&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/controllers/users_controller.rb&#10;show.htm&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/reports/show.html.erb&#10;static&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/controllers/static_pages_controller.rb&#10;index&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/users/index.html.erb&#10;home.html.erb&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/static_pages/home.html.erb&#10;reports_cont&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/controllers/reports_controller_test.rb&#10;cont&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/controllers/reports_controller.rb&#10;new&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/users/new.html.erb&#10;routes.rb&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/config/routes.rb&#10;reports_con&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/controllers/reports_controller.rb&#10;_&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/reports/_report.html.erb&#10;seeds&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/db/seeds.rb&#10;report test&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/models/report_test.rb&#10;_heade&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/layouts/_header.html.erb&#10;_helper&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/helpers/application_helper.rb&#10;show.&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/users/show.html.erb&#10;seed.&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/db/seeds.rb" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -398,12 +422,12 @@
       <updated>1495425198616</updated>
       <workItem from="1495425200011" duration="1567000" />
       <workItem from="1495497355600" duration="28875000" />
-      <workItem from="1495584240362" duration="4802000" />
+      <workItem from="1495584240362" duration="7301000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51181000" />
+    <option name="totallyTimeSpent" value="53680000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="654" y="23" width="625" height="726" extended-state="0" />
@@ -442,14 +466,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db/migrate/20170522050842_add_index_to_users_email.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20170522051139_add_password_digest_to_users.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -542,21 +558,6 @@
         <state relative-caret-position="157">
           <caret line="16" column="20" lean-forward="false" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/report.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/models/report_test.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="46" column="22" lean-forward="true" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -803,26 +804,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+    <entry file="file://$PROJECT_DIR$/test/fixtures/comments.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="62" lean-forward="false" selection-start-line="11" selection-start-column="62" selection-end-line="11" selection-end-column="62" />
+        <state relative-caret-position="0">
+          <caret line="0" column="88" lean-forward="false" selection-start-line="0" selection-start-column="88" selection-end-line="0" selection-end-column="88" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/models/comment_test.rb">
+    <entry file="file://$PROJECT_DIR$/test/models/report_test.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="23" column="4" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+        <state relative-caret-position="592">
+          <caret line="46" column="22" lean-forward="true" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/report.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="18" lean-forward="true" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/comment.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="15">
+          <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/models/comment_test.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
       </provider>
