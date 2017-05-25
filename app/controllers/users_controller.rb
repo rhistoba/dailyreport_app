@@ -19,7 +19,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:info] = "新しいユーザー" + @user.name + "を作成しました"
-      redirect_to users_url
+      redirect_to users_path
     else
       render 'new'
     end
@@ -40,7 +40,7 @@ class UsersController < ApplicationController
   def destroy
     User.find(params[:id]).destroy
     flash[:success] = "ユーザーを削除しました"
-    redirect_to users_url
+    redirect_to users_path
   end
 
   private
@@ -54,7 +54,7 @@ class UsersController < ApplicationController
 
   # 管理者かどうか確認
   def confirm_admin
-    redirect_to(root_url) unless current_user.admin?
+    redirect_to(root_path) unless current_user.admin?
   end
 
   def set_user
