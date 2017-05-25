@@ -1,32 +1,32 @@
 <% provide(:title, @user.name) %>
 <div class="col-md-4 col-md-offset-1">
-  <h3>ユーザー情報</h3>
+  <h3><%= t('headline.user.show.info') %></h3>
   <table class="table table-bordered">
     <tbody>
     <tr>
-      <th width="120">ユーザー名</th>
+      <th width="120"><%= t('activerecord.attributes.user.name') %></th>
       <td><%= @user.name %></td>
     </tr>
     <tr>
-      <th>メールアドレス</th>
+      <th><%= t('activerecord.attributes.user.email') %></th>
       <td><%= @user.email %></td>
     </tr>
     <tr>
-      <th>所属部署</th>
+      <th><%= t('activerecord.attributes.user.department') %></th>
       <td><%= @user.department %></td>
     </tr>
     </tbody>
   </table>
 </div>
 <div class="col-md-10 col-md-offset-1">
-  <h3>作成した日報</h3>
+  <h3><%= t('headline.user.show.reports') %></h3>
   <table class="table table-striped">
     <thead>
     <tr>
-      <th>日付</th>
-      <th>ユーザー</th>
-      <th>タイトル</th>
-      <th>コメント数</th>
+      <th><%= t('activerecord.attributes.report.date') %></th>
+      <th><%= t('activerecord.attributes.user.name') %></th>
+      <th><%= t('activerecord.attributes.report.title') %></th>
+      <th><%= t('table_column.comment_num') %></th>
     </tr>
     </thead>
     <tbody>
