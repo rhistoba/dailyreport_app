@@ -1,0 +1,16 @@
+ja:
+  activemodel:
+    attributes:
+
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+
+    models:
+      user: ユーザー
+
+    attributes:
+      user:
+        name: 名前
