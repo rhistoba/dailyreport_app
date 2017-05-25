@@ -38,7 +38,7 @@
       <td><%= comment.content %></td>
       <td width="150"><%= time_ago_in_words(comment.created_at) + ' ago' %></td>
       <% if current_user?(comment.user) %>
-          <td width="50"><%= link_to "削除", comment, method: :delete,
+          <td width="50"><%= link_to "削除", [@report, comment], method: :delete,
                           data: { confirm: "本当に削除しますか？" } %></td>
       <% else %>
           <td width="50"></td>
