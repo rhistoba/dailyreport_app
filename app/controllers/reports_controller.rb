@@ -16,7 +16,7 @@ class ReportsController < ApplicationController
     @report = current_user.reports.build(report_params)
     if @report.save
       flash[:info] = "新しい日報を作成しました"
-      redirect_to root_url
+      redirect_to root_path
     else
       render 'new'
     end
@@ -28,7 +28,7 @@ class ReportsController < ApplicationController
   def update
     if @report.update_attributes(report_params)
       flash[:success] = "日報を変更しました"
-      redirect_to report_url(@report)
+      redirect_to @report
     else
       render 'edit'
     end
@@ -48,7 +48,7 @@ class ReportsController < ApplicationController
   # beforeアクション
   def confirm_editable_user
     @report = Report.find(params[:id])
-    redirect_to(root_url) unless @report.user == current_user
+    redirect_to(root_path) unless @report.user == current_user
   end
 
   def set_report
