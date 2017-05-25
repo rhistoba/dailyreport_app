@@ -33,10 +33,6 @@ class ReportTest < ActiveSupport::TestCase
     assert_not @report.valid?
   end
 
-  test "order should be most recent day first" do
-    assert_equal reports(:user2_most_recent), Report.first
-  end
-
   test "a user can create only 1 report per 1 day" do
     time_now = Time.now
     report_today = @user.reports.create!(date:time_now, title:"1",
