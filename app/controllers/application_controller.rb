@@ -5,9 +5,8 @@ class ApplicationController < ActionController::Base
   private
 
   # ユーザーのログインを確認する
-  def logged_in_user
+  def confirm_login
     unless logged_in?
-      #flash[:danger] = "Please log in."
       redirect_to login_path
     end
   end

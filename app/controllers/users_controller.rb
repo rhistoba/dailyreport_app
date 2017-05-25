@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user
-  before_action :admin_user, only: [:new, :create, :edit, :update, :destroy]
+  before_action :confirm_login
+  before_action :confirm_admin, only: [:new, :create, :edit, :update, :destroy]
 
   def index
     @users = User.paginate(page: params[:page])
@@ -55,7 +55,7 @@ class UsersController < ApplicationController
   # beforeアクション
 
   # 管理者かどうか確認
-  def admin_user
+  def confirm_admin
     redirect_to(root_url) unless current_user.admin?
   end
 

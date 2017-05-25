@@ -1,6 +1,6 @@
 class ReportsController < ApplicationController
-  before_action :logged_in_user
-  before_action :correct_user, only: [:edit, :update, :destroy]
+  before_action :confirm_login
+  before_action :confirm_editable_user, only: [:edit, :update, :destroy]
 
   def show
     @report = Report.find(params[:id])
@@ -48,7 +48,7 @@ class ReportsController < ApplicationController
   end
 
   # beforeアクション
-  def correct_user
+  def confirm_editable_user
     @report = Report.find(params[:id])
     redirect_to(root_url) unless @report.user == current_user
   end

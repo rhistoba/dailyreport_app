@@ -1,5 +1,5 @@
 class StaticPagesController < ApplicationController
-  before_action :logged_in_user
+  before_action :confirm_login
 
   def home
     @reports = Report.paginate(page: params[:page])
