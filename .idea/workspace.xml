@@ -3,17 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b12929bf-7565-4e07-84b1-b7c1d1613e22" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_header.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/reports/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/reports/_form.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/reports/_report.html.erb" afterPath="$PROJECT_DIR$/app/views/reports/_report.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/reports/new.html.erb" afterPath="$PROJECT_DIR$/app/views/reports/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/reports/show.html.erb" afterPath="$PROJECT_DIR$/app/views/reports/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shared/_comment_form.html.erb" afterPath="$PROJECT_DIR$/app/views/shared/_comment_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/static_pages/home.html.erb" afterPath="$PROJECT_DIR$/app/views/static_pages/home.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/index.html.erb" afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/new.html.erb" afterPath="$PROJECT_DIR$/app/views/users/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/show.html.erb" afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seeds.rb" afterPath="$PROJECT_DIR$/db/seeds.rb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -42,25 +32,25 @@
       <file leaf-file-name="home.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/static_pages/home.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="11" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+            <state relative-caret-position="180">
+              <caret line="12" column="15" lean-forward="true" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/reports/new.html.erb">
+      <file leaf-file-name="_report.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/reports/_report.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+            <state relative-caret-position="30">
+              <caret line="2" column="56" lean-forward="false" selection-start-line="2" selection-start-column="56" selection-end-line="2" selection-end-column="56" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_form.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/reports/_form.html.erb">
+      <file leaf-file-name="static_pages_controller.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/static_pages_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
               <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
@@ -69,71 +59,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
+      <file leaf-file-name="home_page_test.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/integration/home_page_test.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+            <state relative-caret-position="315">
+              <caret line="21" column="2" lean-forward="false" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
+      <file leaf-file-name="reports.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/fixtures/reports.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="18" lean-forward="false" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+            <state relative-caret-position="240">
+              <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_header.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/reports/show.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="38" column="18" lean-forward="false" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_comment_form.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/shared/_comment_form.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="51" lean-forward="false" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/users/new.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_form.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/users/_form.html.erb">
+      <file leaf-file-name="users.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/fixtures/users.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
               <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="comments.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/fixtures/comments.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="88" lean-forward="false" selection-start-line="0" selection-start-column="88" selection-end-line="0" selection-end-column="88" />
               <folding />
             </state>
           </provider>
@@ -155,7 +115,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/db/migrate/20170522050842_add_index_to_users_email.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
@@ -194,7 +153,6 @@
         <option value="$PROJECT_DIR$/app/controllers/reports_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/comments_controller.rb" />
         <option value="$PROJECT_DIR$/test/controllers/comments_controller_test.rb" />
-        <option value="$PROJECT_DIR$/app/views/reports/_report.html.erb" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/app/views/users/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/users/index.html.erb" />
@@ -205,6 +163,9 @@
         <option value="$PROJECT_DIR$/app/views/users/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/shared/_comment_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/reports/show.html.erb" />
+        <option value="$PROJECT_DIR$/test/controllers/static_pages_controller_test.rb" />
+        <option value="$PROJECT_DIR$/app/views/reports/_report.html.erb" />
+        <option value="$PROJECT_DIR$/test/integration/home_page_test.rb" />
       </list>
     </option>
   </component>
@@ -216,7 +177,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1207" />
+    <option name="width" value="1279" />
     <option name="height" value="726" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -237,8 +198,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="RailsProjectView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -251,15 +210,81 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dailyreport_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dailyreport_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dailyreport_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dailyreport_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="integration" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dailyreport_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dailyreport_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dailyreport_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dailyreport_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="RailsProjectView" />
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value="show&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/reports/show.html.erb&#10;_head&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/layouts/_header.html.erb&#10;new&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/users/new.html.erb&#10;home&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/static_pages/home.html.erb&#10;_heade&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/layouts/_header.html.erb&#10;index&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/users/index.html.erb&#10;seed&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/db/seeds.rb&#10;show.h&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/reports/show.html.erb&#10;user&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/controllers/users_controller.rb&#10;Gemfile&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/Gemfile&#10;show.&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/users/show.html.erb&#10;_report&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/reports/_report.html.erb&#10;home.html&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/static_pages/home.html.erb&#10;home.ht&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/static_pages/home.html.erb&#10;comment&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/controllers/comments_controller.rb&#10;_test&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/models/report_test.rb&#10;comments_con&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/controllers/comments_controller_test.rb&#10;comments_cont&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/controllers/comments_controller.rb&#10;static&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/controllers/static_pages_controller.rb&#10;_comment&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/shared/_comment_form.html.erb&#10;report_co&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/controllers/reports_controller.rb&#10;_form&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/users/_form.html.erb&#10;show.html.&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/reports/show.html.erb&#10;routes.rb&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/config/routes.rb&#10;schema&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/db/schema.rb&#10;report_test&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/models/report_test.rb&#10;comments.y&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/fixtures/comments.yml&#10;report.rb&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/models/report.rb&#10;user.rb&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/models/user.rb&#10;comment_test.rb&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/models/comment_test.rb&#10;create_re&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/db/migrate/20170523024050_create_reports.rb&#10;create_com&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/db/migrate/20170524010953_create_comments.rb&#10;comment.rb&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/models/comment.rb&#10;new.ht&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/sessions/new.html.erb&#10;session&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/controllers/sessions_controller.rb&#10;usersym&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/fixtures/users.yml&#10;edit&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/users/edit.html.erb&#10;new.html&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/users/new.html.erb&#10;user_test&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/models/user_test.rb&#10;show.html&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/users/show.html.erb&#10;users_con&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/controllers/users_controller.rb&#10;add user&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/db/migrate/20170522074705_add_admin_to_users.rb&#10;createt_&#9;FILE&#9;file:///Users/stoba/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.0.0.1/lib/rails/generators/active_record/migration/templates/create_table_migration.rb&#10;user test&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/controllers/users_controller_test.rb&#10;reports.yml&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/fixtures/reports.yml&#10;users.yml&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/fixtures/users.yml&#10;routes&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/config/routes.rb&#10;con&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/controllers/reports_controller.rb&#10;co&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/controllers/reports_controller_test.rb&#10;stati&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/controllers/static_pages_controller.rb" />
+    <property name="SearchEverywhereHistoryKey" value="_report&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/reports/_report.html.erb&#10;home.html&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/static_pages/home.html.erb&#10;reports.yml&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/fixtures/reports.yml&#10;comments.y&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/fixtures/comments.yml&#10;users.yml&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/fixtures/users.yml&#10;stati&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/controllers/static_pages_controller.rb&#10;static&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/controllers/static_pages_controller_test.rb&#10;home.h&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/static_pages/home.html.erb&#10;comment&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/controllers/comments_controller.rb&#10;report_con&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/controllers/reports_controller.rb&#10;show&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/reports/show.html.erb&#10;show.h&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/users/show.html.erb&#10;_comment&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/shared/_comment_form.html.erb&#10;_head&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/layouts/_header.html.erb&#10;new&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/users/new.html.erb&#10;home&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/static_pages/home.html.erb&#10;_heade&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/layouts/_header.html.erb&#10;index&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/users/index.html.erb&#10;seed&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/db/seeds.rb&#10;user&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/controllers/users_controller.rb&#10;Gemfile&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/Gemfile&#10;show.&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/users/show.html.erb&#10;home.ht&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/static_pages/home.html.erb&#10;_test&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/models/report_test.rb&#10;comments_con&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/controllers/comments_controller_test.rb&#10;comments_cont&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/controllers/comments_controller.rb&#10;report_co&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/controllers/reports_controller.rb&#10;_form&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/users/_form.html.erb&#10;show.html.&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/reports/show.html.erb&#10;routes.rb&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/config/routes.rb&#10;schema&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/db/schema.rb&#10;report_test&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/models/report_test.rb&#10;report.rb&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/models/report.rb&#10;user.rb&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/models/user.rb&#10;comment_test.rb&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/models/comment_test.rb&#10;create_re&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/db/migrate/20170523024050_create_reports.rb&#10;create_com&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/db/migrate/20170524010953_create_comments.rb&#10;comment.rb&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/models/comment.rb&#10;new.ht&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/sessions/new.html.erb&#10;session&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/controllers/sessions_controller.rb&#10;usersym&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/fixtures/users.yml&#10;edit&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/users/edit.html.erb&#10;new.html&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/users/new.html.erb&#10;user_test&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/models/user_test.rb&#10;show.html&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/views/users/show.html.erb&#10;users_con&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/app/controllers/users_controller.rb&#10;add user&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/db/migrate/20170522074705_add_admin_to_users.rb&#10;createt_&#9;FILE&#9;file:///Users/stoba/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.0.0.1/lib/rails/generators/active_record/migration/templates/create_table_migration.rb&#10;user test&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/test/controllers/users_controller_test.rb&#10;routes&#9;FILE&#9;file:///Users/stoba/Desktop/workspace/dailyreport_app/config/routes.rb" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -490,27 +515,28 @@
       <updated>1495425198616</updated>
       <workItem from="1495425200011" duration="1567000" />
       <workItem from="1495497355600" duration="28875000" />
-      <workItem from="1495584240362" duration="28086000" />
+      <workItem from="1495584240362" duration="28359000" />
+      <workItem from="1495670489476" duration="6944000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74465000" />
+    <option name="totallyTimeSpent" value="81682000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1207" height="726" extended-state="0" />
+    <frame x="0" y="23" width="1279" height="726" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33306387" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16329831" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933104" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39313304" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4122878" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -534,29 +560,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/bootstrap-will_paginate-0.0.10/config/initializers/will_paginate.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-200">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1245">
-          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -583,7 +586,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -596,19 +598,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/static_pages/_report.html.erb" />
-    <entry file="file://$PROJECT_DIR$/test/fixtures/reports.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/activerecord-5.0.0.1/lib/rails/generators/active_record/migration/templates/create_table_migration.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -616,18 +609,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20170524001515_user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="12" lean-forward="true" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20170524001515_user.rb" />
     <entry file="file://$PROJECT_DIR$/db/migrate/20170522074705_add_admin_to_users.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -656,15 +641,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/fixtures/users.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -672,7 +648,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="148">
           <caret line="10" column="28" lean-forward="false" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -680,7 +655,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -688,7 +662,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="34" lean-forward="false" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -696,14 +669,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/fixtures/comments.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="88" lean-forward="false" selection-start-line="0" selection-start-column="88" selection-end-line="0" selection-end-column="88" />
           <folding />
         </state>
       </provider>
@@ -744,7 +709,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -752,15 +716,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
           <caret line="33" column="8" lean-forward="false" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/reports_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="31" lean-forward="false" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -788,22 +743,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/comments_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="18" column="22" lean-forward="false" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/static_pages_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="30" lean-forward="false" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/user.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -816,15 +755,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="106">
           <caret line="203" column="12" lean-forward="false" selection-start-line="203" selection-start-column="12" selection-end-line="203" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/reports/_report.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -848,7 +778,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
           <caret line="50" column="30" lean-forward="false" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -860,26 +789,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="18" lean-forward="false" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/static_pages/home.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="11" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -895,7 +808,7 @@
     <entry file="file://$PROJECT_DIR$/app/views/reports/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -903,7 +816,7 @@
     <entry file="file://$PROJECT_DIR$/app/views/users/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -919,7 +832,23 @@
     <entry file="file://$PROJECT_DIR$/app/views/shared/_comment_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" column="51" lean-forward="false" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
+          <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rbenv/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.0.0.1/lib/action_view/helpers/date_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="177" column="10" lean-forward="false" selection-start-line="177" selection-start-column="10" selection-end-line="177" selection-end-column="10" />
           <folding />
         </state>
       </provider>
@@ -927,7 +856,87 @@
     <entry file="file://$PROJECT_DIR$/app/views/reports/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
-          <caret line="38" column="18" lean-forward="false" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+          <caret line="38" column="37" lean-forward="true" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/reports_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="38" column="12" lean-forward="false" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/comments_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/fixtures/users.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/fixtures/comments.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="88" lean-forward="false" selection-start-line="0" selection-start-column="88" selection-end-line="0" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/fixtures/reports.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/static_pages/home.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="15" lean-forward="true" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/controllers/static_pages_controller_test.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/reports/_report.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="56" lean-forward="false" selection-start-line="2" selection-start-column="56" selection-end-line="2" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/integration/home_page_test.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="2" lean-forward="false" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/static_pages_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>

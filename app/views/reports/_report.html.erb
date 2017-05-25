@@ -1,6 +1,6 @@
 <tr>
   <td><%= report.date.to_s %></td>
-  <td><%= link_to report.user.name, user_path(report) %></td>
+  <td><%= link_to report.user.name, user_path(report.user) %></td>
   <td><%= link_to report.title, report_path(report) %></td>
   <td><%= report.comments.count.to_s %></td>
 </tr>
