@@ -14,10 +14,10 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    @report = @comment.report
+    report = @comment.report
     @comment.destroy
     flash[:success] = "コメントを削除しました"
-    redirect_to report_url(@report)
+    redirect_to report_url(report)
   end
 
   private
