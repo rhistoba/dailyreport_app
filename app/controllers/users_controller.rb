@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @reports = @user.reports.paginate(page: params[:page])
+    @reports = @user.reports.order(date: :desc).paginate(page: params[:page])
   end
 
   def new
