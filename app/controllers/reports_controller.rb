@@ -1,4 +1,7 @@
 class ReportsController < ApplicationController
+
+  # @report = Report.find(params[:id]) を before actionにすること
+
   before_action :logged_in_user
   before_action :correct_user, only: [:edit, :update, :destroy]
 
