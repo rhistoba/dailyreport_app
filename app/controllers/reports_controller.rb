@@ -1,9 +1,9 @@
 class ReportsController < ApplicationController
   before_action :confirm_login
   before_action :confirm_editable_user, only: [:edit, :update, :destroy]
+  before_action :set_report, only: [:show, :edit, :update]
 
   def show
-    @report = Report.find(params[:id])
     @comment = current_user.comments.build
     @comments = @report.comments
   end
@@ -23,11 +23,9 @@ class ReportsController < ApplicationController
   end
 
   def edit
-    @report = Report.find(params[:id])
   end
 
   def update
-    @report = Report.find(params[:id])
     if @report.update_attributes(report_params)
       flash[:success] = "日報を変更しました"
       redirect_to report_url(@report)
@@ -51,6 +49,10 @@ class ReportsController < ApplicationController
   def confirm_editable_user
     @report = Report.find(params[:id])
     redirect_to(root_url) unless @report.user == current_user
+  end
+
+  def set_report
+    @report = Report.find(params[:id])
   end
 
 end

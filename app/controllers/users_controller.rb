@@ -1,13 +1,13 @@
 class UsersController < ApplicationController
   before_action :confirm_login
   before_action :confirm_admin, only: [:new, :create, :edit, :update, :destroy]
+  before_action :set_user, only: [:show, :edit, :update]
 
   def index
     @users = User.paginate(page: params[:page])
   end
 
   def show
-    @user = User.find(params[:id])
     @reports = @user.reports.paginate(page: params[:page])
   end
 
@@ -26,11 +26,9 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = User.find(params[:id])
   end
 
   def update
-    @user = User.find(params[:id])
     if @user.update_attributes(user_params)
       flash[:success] = "ユーザー情報を更新しました"
       redirect_to @user
@@ -54,9 +52,12 @@ class UsersController < ApplicationController
 
   # beforeアクション
 
-  # 管理者かどうか確認
   def confirm_admin
     redirect_to(root_url) unless current_user.admin?
+  end
+
+  def set_user
+    @user = User.find(params[:id])
   end
 
 end
