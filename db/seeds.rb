@@ -45,7 +45,7 @@ users.each do |user|
   end
 end
 
-reports = Report.order(:date).take(30)
+reports = Report.order(date: :desc).take(30)
 reports.each do |report|
   (1..4).each do |i|
     user = i.odd? ? user_admin : report.user

@@ -1,0 +1,17 @@
+<div class="col-md-10 col-md-offset-1">
+  <h3><%= t('headline.home.new_report') %></h3>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th width="120"><%= t('activerecord.attributes.report.date') %></th>
+      <th><%= t('activerecord.attributes.user.name') %></th>
+      <th><%= t('activerecord.attributes.report.title') %></th>
+      <th width="120"><%= t('table_column.comment_num') %></th>
+    </tr>
+    </thead>
+    <tbody>
+    <%= render @reports %>
+    </tbody>
+  </table>
+  <%= will_paginate @reports %>
+</div>

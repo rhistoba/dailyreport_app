@@ -1,0 +1,117 @@
+ja:
+
+  errors:
+    messages:
+      blank: "%{attribute}を入力してください"
+      invalid: "%{attribute}は有効ではありません"
+      too_short: "%{attribute}が短すぎます"
+      too_long: "%{attribute}が長すぎます"
+      confirmation: "%{attribute}が一致していません"
+
+  activemodel:
+    attributes:
+
+  activerecord:
+    errors:
+      models:
+        report:
+          taken: "その日の日報がすでに存在します"
+
+    models:
+      user: ユーザー
+      report: 日報
+      comment: コメント
+
+    attributes:
+      user:
+        name: 名前
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: パスワード確認
+        admin: 管理者
+        department: 所属部署
+
+      report:
+        date: 日付
+        title: タイトル
+        content: 内容
+
+  title:
+    home: ホーム
+    user:
+      new: ユーザー新規登録
+      index: ユーザー一覧
+      edit: ユーザー情報変更
+      show: ユーザー情報
+    report:
+      new: 日報新規作成
+      edit: 日報の編集
+    session:
+      new: ログイン
+
+  headline:
+    home:
+      new_report: 新着日報
+    user:
+      show:
+        info: ユーザー情報
+        reports: 作成した日報
+    report:
+      show:
+        this: 日報の内容
+        comments: コメント
+
+  button:
+    comment: コメントする
+    login: ログイン
+
+  link_text:
+    edit: 編集
+    delete: 削除
+
+  table_column:
+    comment_num: コメント数
+
+  confirm:
+    delete: 本当に削除しますか？
+
+  placeholder:
+    report:
+      title: タイトルを入力してください
+      content: 内容を入力してください
+    comment:
+      content: コメントを入力してください
+
+  flash:
+    errors:
+      form: 入力エラー
+
+    user:
+      create:
+        info: 新しいユーザーを作成しました
+      update:
+        success: ユーザー情報を更新しました
+      destroy:
+        success: ユーザーを削除しました
+    report:
+      create:
+        info: 新しい日報を作成しました
+      update:
+        success: 日報を削除しました
+      destroy:
+        success: 日報を削除しました
+    comment:
+      create:
+        success: コメントを作成しました
+        danger: コメントの作成に失敗しました
+      destroy:
+        success: コメントを削除しました
+    session:
+      create:
+        danger: メールアドレスまたはパスワードが正しくありません
+
+  helpers:
+    submit:
+      create: "%{model}の作成"
+      update: "%{model}の編集"
+      delete: "%{model}の削除"

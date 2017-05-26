@@ -1,11 +1,13 @@
 <% if object.errors.any? %>
     <div id="error_explanation">
       <div class="alert alert-danger">
-        The form contains <%= pluralize(object.errors.count, "error") %>.
+        <%= t('flash.errors.form') %>
       </div>
       <ul>
-        <% object.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
+        <% object.errors.messages.each do |key, msg_arr| %>
+            <% msg_arr.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
         <% end %>
       </ul>
     </div>

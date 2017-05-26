@@ -1,9 +1,9 @@
 class ReportsController < ApplicationController
-  before_action :logged_in_user
-  before_action :correct_user, only: [:edit, :update, :destroy]
+  before_action :confirm_login
+  before_action :confirm_editable_user, only: [:edit, :update, :destroy]
+  before_action :set_report, only: [:show, :edit, :update]
 
   def show
-    @report = Report.find(params[:id])
     @comment = current_user.comments.build
     @comments = @report.comments
   end
@@ -15,22 +15,20 @@ class ReportsController < ApplicationController
   def create
     @report = current_user.reports.build(report_params)
     if @report.save
-      flash[:info] = "新しい日報を作成しました"
-      redirect_to root_url
+      flash[:info] = t('flash.report.create.info')
+      redirect_to root_path
     else
       render 'new'
     end
   end
 
   def edit
-    @report = Report.find(params[:id])
   end
 
   def update
-    @report = Report.find(params[:id])
     if @report.update_attributes(report_params)
-      flash[:success] = "日報を変更しました"
-      redirect_to report_url(@report)
+      flash[:success] = t('flash.report.update.success')
+      redirect_to @report
     else
       render 'edit'
     end
@@ -38,7 +36,7 @@ class ReportsController < ApplicationController
 
   def destroy
     Report.find(params[:id]).destroy
-    flash[:success] = "日報を削除しました"
+    flash[:success] = t('flash.report.update.success')
     redirect_to root_path
   end
 
@@ -48,9 +46,13 @@ class ReportsController < ApplicationController
   end
 
   # beforeアクション
-  def correct_user
+  def confirm_editable_user
     @report = Report.find(params[:id])
-    redirect_to(root_url) unless @report.user == current_user
+    redirect_to(root_path) unless @report.user == current_user
+  end
+
+  def set_report
+    @report = Report.find(params[:id])
   end
 
 end

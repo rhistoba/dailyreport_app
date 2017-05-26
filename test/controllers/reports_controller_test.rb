@@ -24,7 +24,7 @@ class ReportsControllerTest < ActionDispatch::IntegrationTest
     assert_difference 'Report.count', 1 do
       post reports_path params: { report: @report }
     end
-    report_created = Report.first.reload
+    report_created = Report.order(date: :desc).first.reload
     assert_equal @user_not_posted.id, report_created.user_id
   end
 
