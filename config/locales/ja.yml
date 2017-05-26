@@ -1,9 +1,23 @@
 ja:
+
+  errors:
+    messages:
+      blank: "%{attribute}を入力してください"
+      invalid: "%{attribute}は有効ではありません"
+      too_short: "%{attribute}が短すぎます"
+      too_long: "%{attribute}が長すぎます"
+      confirmation: "%{attribute}が一致していません"
+
+    orig_flash: "入力エラー"
+
   activemodel:
     attributes:
 
   activerecord:
     errors:
+      models:
+        report:
+          taken: "その日の日報がすでに存在します"
 
     models:
       user: ユーザー
