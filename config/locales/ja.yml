@@ -113,5 +113,5 @@ ja:
   helpers:
     submit:
       create: "%{model}の作成"
-      edit: "%{model}の編集"
+      update: "%{model}の編集"
       delete: "%{model}の削除"
