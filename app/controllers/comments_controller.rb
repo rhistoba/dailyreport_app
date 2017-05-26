@@ -7,10 +7,11 @@ class CommentsController < ApplicationController
     @comment = @report.comments.build(comment_params)
     @comment.user = current_user
     if @comment.save
-      flash[:success] = t('flash.comment.create.success')
-      @comments = @report.reload.comments
+      @comments = @report.comments
       respond_to do |format|
-        format.html { @comment.report }
+        format.html {
+          flash[:success] = t('flash.comment.create.success')
+          redirect_to @comment.report }
         format.js
       end
     else
@@ -22,9 +23,10 @@ class CommentsController < ApplicationController
   def destroy
     @comment.destroy
     @comments = @report.comments
-    flash[:success] = t('flash.comment.destroy.success')
     respond_to do |format|
-      format.html { @comment.report }
+      format.html {
+        flash[:success] = t('flash.comment.destroy.success')
+        redirect_to @comment.report }
       format.js
     end
   end
