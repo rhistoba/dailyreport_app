@@ -8,7 +8,11 @@ class CommentsController < ApplicationController
     @comment.user = current_user
     if @comment.save
       flash[:success] = t('flash.comment.create.success')
-      redirect_to @comment.report
+      @comments = @report.reload.comments
+      respond_to do |format|
+        format.html { @comment.report }
+        format.js
+      end
     else
       flash[:danger] = t('flash.comment.create.danger')
       redirect_to root_path
@@ -17,8 +21,12 @@ class CommentsController < ApplicationController
 
   def destroy
     @comment.destroy
+    @comments = @report.comments
     flash[:success] = t('flash.comment.destroy.success')
-    redirect_to @comment.report
+    respond_to do |format|
+      format.html { @comment.report }
+      format.js
+    end
   end
 
   private
