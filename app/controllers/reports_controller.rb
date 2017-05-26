@@ -15,7 +15,7 @@ class ReportsController < ApplicationController
   def create
     @report = current_user.reports.build(report_params)
     if @report.save
-      flash[:info] = "新しい日報を作成しました"
+      flash[:info] = t('flash.report.create.info')
       redirect_to root_path
     else
       render 'new'
@@ -27,7 +27,7 @@ class ReportsController < ApplicationController
 
   def update
     if @report.update_attributes(report_params)
-      flash[:success] = "日報を変更しました"
+      flash[:success] = t('flash.report.update.success')
       redirect_to @report
     else
       render 'edit'
@@ -36,7 +36,7 @@ class ReportsController < ApplicationController
 
   def destroy
     Report.find(params[:id]).destroy
-    flash[:success] = "日報を削除しました"
+    flash[:success] = t('flash.report.update.success')
     redirect_to root_path
   end
 

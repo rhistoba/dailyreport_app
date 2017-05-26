@@ -8,8 +8,6 @@ ja:
       too_long: "%{attribute}が長すぎます"
       confirmation: "%{attribute}が一致していません"
 
-    orig_flash: "入力エラー"
-
   activemodel:
     attributes:
 
@@ -21,6 +19,8 @@ ja:
 
     models:
       user: ユーザー
+      report: 日報
+      comment: コメント
 
     attributes:
       user:
@@ -84,4 +84,29 @@ ja:
       content: 内容を入力してください
     comment:
       content: コメントを入力してください
+
+  flash:
+    user:
+      create:
+        info: 新しいユーザーを作成しました
+      update:
+        success: ユーザー情報を更新しました
+      destroy:
+        success: ユーザーを削除しました
+    report:
+      create:
+        info: 新しい日報を作成しました
+      update:
+        success: 日報を削除しました
+      destroy:
+        success: 日報を削除しました
+    comment:
+      create:
+        success: コメントを作成しました
+        danger: コメントの作成に失敗しました
+      destroy:
+        success: コメントを削除しました
+    session:
+      create:
+        danger: メールアドレスまたはパスワードが正しくありません
 

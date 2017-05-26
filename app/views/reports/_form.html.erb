@@ -1,21 +1,21 @@
 <%= form_for(@report) do |f| %>
     <%= render 'shared/error_messages', object: f.object %>
 
-    <%= f.label t('activerecord.attributes.report.date') %>
+    <%= f.label :date %>
     <br>
     <%= f.date_select :date, use_month_numbers: true, class: 'form-control' %>
     <br>
 
-    <%= f.label t('activerecord.attributes.report.title') %>
+    <%= f.label :title %>
     <%= f.text_field :title,
                      placeholder: t('placeholder.report.title'),
                      class: 'form-control' %>
 
-    <%= f.label t('activerecord.attributes.report.content') %>
+    <%= f.label :content %>
     <%= f.text_area :content,
                     placeholder: t('placeholder.report.content'),
                     class: 'form-control',
                     rows: "10"%>
 
-    <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+    <%= f.submit class: "btn btn-primary" %>
 <% end %>

@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       log_in user
       redirect_to root_path
     else
-      flash.now[:danger] = 'メールアドレスまたはパスワードが正しくありません'
+      flash.now[:danger] = t('flash.session.create.danger')
       render 'new'
     end
   end

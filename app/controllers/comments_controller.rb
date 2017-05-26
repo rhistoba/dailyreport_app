@@ -7,17 +7,17 @@ class CommentsController < ApplicationController
     @comment = @report.comments.build(comment_params)
     @comment.user = current_user
     if @comment.save
-      flash[:success] = "コメントしました"
+      flash[:success] = t('flash.comment.create.success')
       redirect_to @comment.report
     else
-      flash[:danger] = "コメントできませんでした"
+      flash[:danger] = t('flash.comment.create.danger')
       redirect_to root_path
     end
   end
 
   def destroy
     @comment.destroy
-    flash[:success] = "コメントを削除しました"
+    flash[:success] = t('flash.comment.destroy.success')
     redirect_to @comment.report
   end
 
