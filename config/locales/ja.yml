@@ -62,9 +62,6 @@ ja:
         comments: コメント
 
   button:
-    new: 新規作成
-    edit: 変更する
-    delete: 削除する
     comment: コメントする
     login: ログイン
 
@@ -86,6 +83,9 @@ ja:
       content: コメントを入力してください
 
   flash:
+    errors:
+      form: 入力エラー
+
     user:
       create:
         info: 新しいユーザーを作成しました
@@ -110,3 +110,8 @@ ja:
       create:
         danger: メールアドレスまたはパスワードが正しくありません
 
+  helpers:
+    submit:
+      create: "%{model}の作成"
+      edit: "%{model}の編集"
+      delete: "%{model}の削除"

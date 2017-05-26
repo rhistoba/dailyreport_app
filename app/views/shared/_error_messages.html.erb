@@ -1,7 +1,7 @@
 <% if object.errors.any? %>
     <div id="error_explanation">
       <div class="alert alert-danger">
-        <%= t('errors.orig_flash') %>
+        <%= t('flash.errors.form') %>
       </div>
       <ul>
         <% object.errors.messages.each do |key, msg_arr| %>
