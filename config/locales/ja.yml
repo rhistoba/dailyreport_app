@@ -82,6 +82,10 @@ ja:
     comment:
       content: コメントを入力してください
 
+  checkbox:
+    user:
+      admin: このユーザーを管理者とする
+
   flash:
     errors:
       form: 入力エラー
