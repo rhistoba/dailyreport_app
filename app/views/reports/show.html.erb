@@ -30,20 +30,8 @@
 
   <h3><%= t('headline.report.show.comments') %></h3>
   <table class="table">
-    <tbody>
-    <% @comments.each do |comment| %>
-    <tr>
-      <td width="120"><%= comment.user.name %></td>
-      <td><%= comment.content %></td>
-      <td width="150"><%= time_ago_in_words(comment.created_at) + t('datetime.ago') %></td>
-      <% if current_user?(comment.user) %>
-          <td width="50"><%= link_to t('link_text.delete'), [@report, comment], method: :delete,
-                          data: { confirm: t('confirm.delete') } %></td>
-      <% else %>
-          <td width="50"></td>
-      <% end %>
-    </tr>
-    <% end %>
+    <tbody id="tbody-comment">
+    <%= render 'shared/comments' %>
     </tbody>
   </table>
 

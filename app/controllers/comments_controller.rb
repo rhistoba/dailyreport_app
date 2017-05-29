@@ -7,8 +7,7 @@ class CommentsController < ApplicationController
     @comment = @report.comments.build(comment_params)
     @comment.user = current_user
     if @comment.save
-      flash[:success] = t('flash.comment.create.success')
-      redirect_to @comment.report
+      @comments = @report.comments
     else
       flash[:danger] = t('flash.comment.create.danger')
       redirect_to root_path
@@ -17,8 +16,8 @@ class CommentsController < ApplicationController
 
   def destroy
     @comment.destroy
-    flash[:success] = t('flash.comment.destroy.success')
-    redirect_to @comment.report
+    @comments = @report.comments
+    render :create
   end
 
   private
