@@ -1,5 +1,6 @@
 class TopPageController < ApplicationController
   before_action :confirm_login
+  before_action :confirm_retire
 
   def home
     user_ids = User.where(retire: false).select(:id)

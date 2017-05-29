@@ -138,4 +138,15 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert_match @retired_user.email, response.body
     assert_match @retired_user.department, response.body
   end
+
+  test 'retired user cannnot operate' do
+    log_in_as(@admin_user, 'password')
+    patch user_path(@admin_user), params: { user: {
+        password: 'password',
+        password_confirmation: 'password',
+        retire: true } }
+    assert @admin_user.reload.retire?
+    get users_path
+    assert_redirected_to login_path
+  end
 end

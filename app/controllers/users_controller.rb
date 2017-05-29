@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   before_action :confirm_login
   before_action :confirm_admin, only: [:new, :create, :edit, :update, :destroy]
   before_action :set_user, only: [:show, :edit, :update]
+  before_action :confirm_retire
 
   def index
     if current_user.admin?

@@ -10,4 +10,9 @@ class ApplicationController < ActionController::Base
       redirect_to login_path
     end
   end
+
+  # ユーザーが退職者かどうか確認する
+  def confirm_retire
+    redirect_to login_path if current_user.retire?
+  end
 end

@@ -60,4 +60,16 @@ class ReportsControllerTest < ActionDispatch::IntegrationTest
       delete report_path(report)
     end
   end
+
+  test 'retired user cannnot operate' do
+    user_admin = @user_other
+    log_in_as(user_admin, 'password')
+    patch user_path(user_admin), params: { user: {
+        password: 'password',
+        password_confirmation: 'password',
+        retire: true } }
+    assert user_admin.reload.retire?
+    get report_path(@user_posted.reports.first)
+    assert_redirected_to login_path
+  end
 end

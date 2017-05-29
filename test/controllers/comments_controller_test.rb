@@ -37,4 +37,20 @@ class CommentsControllerTest < ActionDispatch::IntegrationTest
       delete report_comment_path(@report, @comment), xhr: true
     end
   end
+
+  test 'retired user cannnot operate' do
+    log_in_as(@user1, 'password')
+    patch user_path(@user1), params: { user: {
+        password: 'password',
+        password_confirmation: 'password',
+        retire: true } }
+    assert @user1.reload.retire?
+    assert_no_difference 'Comment.count' do
+      post report_comments_path(@report),
+           params: { comment: { content: "from user1" } }, xhr: true
+    end
+    assert_no_difference 'Comment.count' do
+      delete report_comment_path(@report, @comment), xhr: true
+    end
+  end
 end
