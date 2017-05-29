@@ -8,6 +8,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    confirm_admin if @user.retire?
     @reports = @user.reports.order(date: :desc).paginate(page: params[:page])
   end
 

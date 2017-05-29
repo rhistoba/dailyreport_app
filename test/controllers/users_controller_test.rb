@@ -5,6 +5,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   def setup
     @admin_user = users(:michael)
     @not_admin_user = users(:archer)
+    @retired_user = users(:retire)
   end
 
   test "should show all users in users page" do
@@ -122,5 +123,19 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
               password: "foobar", password_confirmation: "foobar",
               department: "Department", retire: true } }
     assert user.reload.retire?
+  end
+
+  test 'only admin user can access retired user page' do
+    log_in_as(@not_admin_user, 'password')
+    get user_path(@retired_user)
+    assert_redirected_to root_path
+    log_out
+
+    log_in_as(@admin_user, 'password')
+    get user_path(@retired_user)
+    assert_template 'users/show'
+    assert_match @retired_user.name, response.body
+    assert_match @retired_user.email, response.body
+    assert_match @retired_user.department, response.body
   end
 end
