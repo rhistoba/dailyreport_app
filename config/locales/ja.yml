@@ -85,6 +85,7 @@ ja:
   checkbox:
     user:
       admin: このユーザーを管理者とする
+      retire: このユーザーを退職者とする
 
   flash:
     errors:
