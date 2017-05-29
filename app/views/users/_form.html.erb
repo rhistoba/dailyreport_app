@@ -22,11 +22,13 @@
       </label>
     </div>
 
-    <div class="checkbox">
-      <label>
-        <%= f.check_box :retire %><%= t('checkbox.user.retire') %>
-      </label>
-    </div>
+    <% if params[:action] == 'edit' %>
+        <div class="checkbox">
+          <label>
+            <%= f.check_box :retire %><%= t('checkbox.user.retire') %>
+          </label>
+        </div>
+    <% end %>
 
     <%= f.submit class: "btn btn-primary" %>
 <% end %>
