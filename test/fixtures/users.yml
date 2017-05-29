@@ -13,3 +13,11 @@ archer:
   password_digest: <%= User.digest('password') %>
   admin: false
   department: 'Department'
+
+retire:
+  name: Retired Person
+  email: retire@example.com
+  password_digest: <%= User.digest('password') %>
+  admin: false
+  department: 'Department'
+  retire: true

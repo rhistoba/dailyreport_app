@@ -116,6 +116,7 @@ ja:
     session:
       create:
         danger: メールアドレスまたはパスワードが正しくありません
+        retire: そのユーザーは退職済みのためログインできません
 
   helpers:
     submit:
