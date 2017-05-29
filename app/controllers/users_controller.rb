@@ -4,7 +4,11 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update]
 
   def index
-    @users = User.paginate(page: params[:page])
+    if current_user.admin?
+      @users = User.paginate(page: params[:page])
+    else
+      @users = User.where(retire: false).paginate(page: params[:page])
+    end
   end
 
   def show
