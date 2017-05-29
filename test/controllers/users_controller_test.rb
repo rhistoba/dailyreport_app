@@ -106,4 +106,21 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
       delete user_path(@admin_user)
     end
   end
+
+  test 'set retire user' do
+    post users_path params: {
+        user: {name: "Hoge Hoge", email: "hoge@example.com",
+               password: "foobar", password_confirmation: "foobar",
+               department: "Department", admin: false, retire: false } }
+    user = User.last.reload
+    assert_not user.retire?
+
+    log_in_as(@admin_user, 'password')
+    patch user_path(user), params: {
+        user:
+            { name: "Edited", email: "hoge@example.com",
+              password: "foobar", password_confirmation: "foobar",
+              department: "Department", retire: true } }
+    assert user.reload.retire?
+  end
 end
