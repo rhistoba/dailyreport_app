@@ -93,6 +93,7 @@ ja:
         success: ユーザー情報を更新しました
       destroy:
         success: ユーザーを削除しました
+        less_admin_user: 管理者は必ず1人以上必要です
     report:
       create:
         info: 新しい日報を作成しました

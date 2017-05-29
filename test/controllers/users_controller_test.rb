@@ -67,4 +67,43 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert reload_user.name == edited_info[:name]
     assert reload_user.email == edited_info[:email]
   end
+
+  test "create admin user" do
+    new_user = {name: "Hoge Hoge", email: "hoge@example.com",
+                password: "foobar", password_confirmation: "foobar",
+                department: "Department", admin: true}
+
+    log_in_as(@not_admin_user, 'password')
+    assert_no_difference 'User.count' do
+      post users_path params: { user: new_user }
+    end
+    log_out
+
+    log_in_as(@admin_user, 'password')
+    assert_difference 'User.count', 1 do
+      post users_path params: { user: new_user }
+    end
+    user_created = User.last.reload
+    assert user_created.admin?
+  end
+
+  test 'delete admin user' do
+    new_user = {name: "Hoge Hoge", email: "hoge@example.com",
+                password: "foobar", password_confirmation: "foobar",
+                department: "Department", admin: true}
+
+    log_in_as(@admin_user, 'password')
+    post users_path params: { user: new_user }
+    user_created = User.last.reload
+    assert user_created.admin?
+
+    assert_difference 'User.count', -1 do
+      delete user_path(user_created)
+    end
+
+    # admin userが１人だけなら削除されないはず
+    assert_no_difference 'User.count' do
+      delete user_path(@admin_user)
+    end
+  end
 end

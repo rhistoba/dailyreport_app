@@ -38,8 +38,14 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    User.find(params[:id]).destroy
-    flash[:success] = t('flash.user.destroy.success')
+    user = User.find(params[:id])
+    # user.admin==false なら && 以降は実行されない
+    if user.admin? && User.where(admin: true).count <= 1
+      flash[:danger] = t('flash.user.destroy.less_admin_user')
+    else
+      user.destroy
+      flash[:success] = t('flash.user.destroy.success')
+    end
     redirect_to users_path
   end
 
@@ -47,7 +53,7 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(
-        :name, :email, :password, :password_confirmation, :department)
+        :name, :email, :password, :password_confirmation, :department, :admin)
   end
 
   # beforeアクション
