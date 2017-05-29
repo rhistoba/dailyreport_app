@@ -15,6 +15,18 @@
       <th><%= t('activerecord.attributes.user.department') %></th>
       <td><%= @user.department %></td>
     </tr>
+    <tr>
+      <th><%= t('activerecord.attributes.user.admin') %></th>
+      <td>
+        <%= @user.admin? ? 'YES' : 'NO' %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= t('activerecord.attributes.user.retire') %></th>
+      <td>
+        <%= @user.retire? ? 'YES' : 'NO' %>
+      </td>
+    </tr>
     </tbody>
   </table>
 </div>

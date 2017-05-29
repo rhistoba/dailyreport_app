@@ -30,6 +30,7 @@ ja:
         password_confirmation: パスワード確認
         admin: 管理者
         department: 所属部署
+        retire: 退職者
 
       report:
         date: 日付
