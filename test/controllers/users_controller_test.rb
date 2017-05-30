@@ -135,7 +135,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert_template 'users/edit'
     assert @admin_user.admin?
 
-    # admin: true かつ retire: false のユーザーが1人だけのとき、そのユーザーは退職者に変更されない
+    # admin: true かつ retire: false のユーザーが1人だけのとき、そのユーザーは退職者または非管理者に変更されない
     assert_equal User.where(admin: true, retire: false).count, 1
     assert_no_difference 'User.where(admin: true, retire: false).count' do
       patch user_path(@admin_user), params: {
@@ -144,6 +144,20 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     end
     assert_template 'users/edit'
     assert_not @admin_user.retire?
+
+    # admin: true かつ retire: false のユーザーが1人だけのとき、そのユーザーは非管理者に変更されない
+    patch user_path(@not_admin_user), params: {
+        user: { password: "password", password_confirmation: "password",
+                admin: true, retire: true } }
+    assert_equal User.where(admin: true).count, 2
+    assert_equal User.where(admin: true, retire: false).count, 1
+    assert_no_difference 'User.where(admin: true, retire: false).count' do
+      patch user_path(@admin_user), params: {
+          user: { password: "password", password_confirmation: "password",
+                  admin: false } }
+    end
+    assert_template 'users/edit'
+    assert @admin_user.admin?
   end
 
   test 'set retire user' do

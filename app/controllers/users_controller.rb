@@ -73,7 +73,7 @@ class UsersController < ApplicationController
     if admin_to_not_admin? && less_admin_user?
       flash[:danger] = t('flash.user.update.less_admin_user')
       render 'edit'
-    elsif admin_working_to_retire? && less_working_admin?
+    elsif admin_working_to_retire_or_not_admin? && less_working_admin?
       flash[:danger] = t('flash.user.update.less_working_admin')
       render 'edit'
     end
@@ -98,8 +98,9 @@ class UsersController < ApplicationController
         User.where(admin: true, retire: false).count <= 1
   end
 
-  def admin_working_to_retire?
-    @user.admin? && !@user.retire? && (user_params[:retire]=='true')
+  def admin_working_to_retire_or_not_admin?
+    @user.admin? && !@user.retire? &&
+        (user_params[:retire]=='true' || user_params[:admin]!='true')
   end
 
   def admin_to_not_admin?
