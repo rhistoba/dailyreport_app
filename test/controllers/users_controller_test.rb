@@ -107,8 +107,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
 
     # admin: true かつ retire: false のユーザーが1人だけのとき、そのユーザーは削除されない
     patch user_path(user_created), params:
-        { user:
-              { password: 'foobar', password_confirmation: 'foobar',
+        { user: { password: 'foobar', password_confirmation: 'foobar',
                 retire: true} }
     assert user_created.reload.retire?
     assert user_created.admin?
@@ -121,6 +120,30 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
       delete user_path(user_created)
     end
 
+  end
+
+  test 'confirm editable admin user' do
+    log_in_as(@admin_user, 'password')
+
+    # admin userが１人だけならそのユーザーはadmin=falseとされない
+    assert_equal User.where(admin: true).count, 1
+    assert_no_difference 'User.where(admin: true).count' do
+      patch user_path(@admin_user), params: {
+          user: { password: "password", password_confirmation: "password",
+                  admin: false } }
+    end
+    assert_template 'users/edit'
+    assert @admin_user.admin?
+
+    # admin: true かつ retire: false のユーザーが1人だけのとき、そのユーザーは退職者に変更されない
+    assert_equal User.where(admin: true, retire: false).count, 1
+    assert_no_difference 'User.where(admin: true, retire: false).count' do
+      patch user_path(@admin_user), params: {
+          user: { password: "password", password_confirmation: "password",
+                  retire: true } }
+    end
+    assert_template 'users/edit'
+    assert_not @admin_user.retire?
   end
 
   test 'set retire user' do
@@ -152,17 +175,6 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert_match @retired_user.name, response.body
     assert_match @retired_user.email, response.body
     assert_match @retired_user.department, response.body
-  end
-
-  test 'retired user cannnot operate' do
-    log_in_as(@admin_user, 'password')
-    patch user_path(@admin_user), params: { user: {
-        password: 'password',
-        password_confirmation: 'password',
-        retire: true } }
-    assert @admin_user.reload.retire?
-    get users_path
-    assert_redirected_to login_path
   end
 
 end
