@@ -45,7 +45,6 @@ class UsersController < ApplicationController
 
   def destroy
     user = User.find(params[:id])
-    # user.admin==false なら && 以降は実行されない
     if user.admin? && User.where(admin: true).count <= 1
       flash[:danger] = t('flash.user.destroy.less_admin_user')
     else
