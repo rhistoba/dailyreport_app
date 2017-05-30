@@ -12,5 +12,5 @@
 </tr>
 <tr>
   <th><%= t('activerecord.attributes.report.content') %></th>
-  <td><%= @report.content %></td>
+  <td><%= simple_format(h(@report.content)) %></td>
 </tr>
