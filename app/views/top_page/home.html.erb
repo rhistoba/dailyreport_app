@@ -1,3 +1,15 @@
+<div class="col-md-4 col-md-offset-1">
+  <h3><%= t('headline.home.calendar') %></h3>
+  <%= month_calendar do |date| %>
+      <% report = @reports_user.find_by(date: date) %>
+      <% if report %>
+          <%= link_to date.day, report %>
+      <% else %>
+          <%= date.day %>
+      <% end %>
+  <% end %>
+</div>
+
 <div class="col-md-10 col-md-offset-1">
   <h3><%= t('headline.home.new_report') %></h3>
   <table class="table table-striped">
@@ -10,8 +22,8 @@
     </tr>
     </thead>
     <tbody>
-    <%= render @reports %>
+    <%= render @reports_all %>
     </tbody>
   </table>
-  <%= will_paginate @reports %>
+  <%= will_paginate @reports_all %>
 </div>
