@@ -100,11 +100,10 @@ class UsersController < ApplicationController
 
   def admin_working_to_retire_or_not_admin?
     @user.admin? && !@user.retire? &&
-        (user_params[:retire]=='true' || user_params[:admin]!='true')
+        (user_params[:retire]=='true' || user_params[:admin]=='false')
   end
 
   def admin_to_not_admin?
-    # チェックボックスが空のときfalseではなくnilが返ってくるため、!='true'としている
-    @user.admin? && (user_params[:admin]!='true')
+    @user.admin? && (user_params[:admin]=='false')
   end
 end
