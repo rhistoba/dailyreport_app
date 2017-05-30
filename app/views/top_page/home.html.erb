@@ -1,4 +1,4 @@
-<div class="col-md-4 col-md-offset-1">
+<div class="col-md-3 col-md-offset-1">
   <h3><%= t('headline.home.calendar') %></h3>
   <%= month_calendar do |date| %>
       <% report = @reports_user.find_by(date: date) %>
@@ -8,6 +8,10 @@
           <%= date.day %>
       <% end %>
   <% end %>
+</div>
+
+<div class="col-md-5">
+  <h3>日報の内容</h3>
 </div>
 
 <div class="col-md-10 col-md-offset-1">
