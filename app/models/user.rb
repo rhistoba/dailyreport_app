@@ -12,6 +12,8 @@ class User < ApplicationRecord
   validates :password, presence: true, length: { minimum: 6 }
   validates :department, presence: true, length: { maximum: 50 }
 
+  scope :working, -> { where(retire: false) }
+
   # 渡された文字列のハッシュ値を返す
   def self.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ?

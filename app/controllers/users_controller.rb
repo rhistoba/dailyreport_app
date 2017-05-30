@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     if current_user.admin?
       @users = User.paginate(page: params[:page])
     else
-      @users = User.where(retire: false).paginate(page: params[:page])
+      @users = User.working.paginate(page: params[:page])
     end
   end
 
