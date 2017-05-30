@@ -54,6 +54,7 @@ ja:
     home:
       new_report: 新着日報
       calendar: カレンダー
+      report_content: 日報の内容
     user:
       show:
         info: ユーザー情報

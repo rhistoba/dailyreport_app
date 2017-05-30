@@ -3,15 +3,21 @@
   <%= month_calendar do |date| %>
       <% report = @reports_user.find_by(date: date) %>
       <% if report %>
-          <%= link_to date.day, report %>
+          <u>
+            <%= link_to date.day, report_path(report), remote: true %>
+          </u>
       <% else %>
           <%= date.day %>
       <% end %>
   <% end %>
 </div>
 
-<div class="col-md-5">
+<div class="col-md-7">
   <h3>日報の内容</h3>
+  <table class="table">
+    <tbody id="report-content">
+    </tbody>
+  </table>
 </div>
 
 <div class="col-md-10 col-md-offset-1">
