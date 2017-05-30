@@ -1,1 +1,2 @@
-$("#report-content").html("<%= j(render 'shared/report') %>")
+$("#tbody-report-content").html("<%= j(render 'shared/report') %>");
+$("#div-report-content").append("<%= j(link_to t('link_text.jump_to_report_page'), report_path(@report)) %>");

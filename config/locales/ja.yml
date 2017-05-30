@@ -71,6 +71,7 @@ ja:
   link_text:
     edit: 編集
     delete: 削除
+    jump_to_report_page: この日報のページに移動する
 
   table_column:
     comment_num: コメント数
