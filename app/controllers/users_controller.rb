@@ -45,8 +45,10 @@ class UsersController < ApplicationController
 
   def destroy
     user = User.find(params[:id])
-    if user.admin? && User.where(admin: true).count <= 1
+    if less_admin_user?(user)
       flash[:danger] = t('flash.user.destroy.less_admin_user')
+    elsif less_working_admin?(user)
+      flash[:danger] = t('flash.user.destroy.less_working_admin')
     else
       user.destroy
       flash[:success] = t('flash.user.destroy.success')
@@ -70,6 +72,15 @@ class UsersController < ApplicationController
 
   def set_user
     @user = User.find(params[:id])
+  end
+
+  def less_admin_user?(user)
+    user.admin? && User.where(admin: true).count <= 1
+  end
+
+  def less_working_admin?(user)
+    user.admin? && !user.retire? &&
+        User.where(admin: true, retire: false).count <= 1
   end
 
 end

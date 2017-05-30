@@ -94,18 +94,33 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
                 department: "Department", admin: true}
 
     log_in_as(@admin_user, 'password')
+
+    # admin userが１人だけならそのユーザーは削除されない
+    assert_equal User.where(admin: true).count, 1
+    assert_no_difference 'User.count' do
+      delete user_path(@admin_user)
+    end
+
     post users_path params: { user: new_user }
     user_created = User.last.reload
     assert user_created.admin?
+
+    # admin: true かつ retire: false のユーザーが1人だけのとき、そのユーザーは削除されない
+    patch user_path(user_created), params:
+        { user:
+              { password: 'foobar', password_confirmation: 'foobar',
+                retire: true} }
+    assert user_created.reload.retire?
+    assert user_created.admin?
+    assert_equal User.where(admin: true, retire: false).count, 1
+    assert_no_difference 'User.count' do
+      delete user_path(@admin_user)
+    end
 
     assert_difference 'User.count', -1 do
       delete user_path(user_created)
     end
 
-    # admin userが１人だけなら削除されないはず
-    assert_no_difference 'User.count' do
-      delete user_path(@admin_user)
-    end
   end
 
   test 'set retire user' do
@@ -149,4 +164,5 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     get users_path
     assert_redirected_to login_path
   end
+
 end
