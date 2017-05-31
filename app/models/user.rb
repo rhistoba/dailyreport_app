@@ -29,13 +29,13 @@ class User < ApplicationRecord
     if (self.admin_was && !self.retire_was) &&
         (!self.admin? || self.retire?) &&
         less_working_admin?
-      self.errors[:base] << "在職中の管理者は1人以上必要です"
+      self.errors[:base] << I18n.t('errors.messages.less_working_admin')
     end
   end
 
   def confirm_deletable
     if (self.admin? && !self.retire?) && less_working_admin?
-      self.errors[:base] << "在職中の管理者は1人以上必要です"
+      self.errors[:base] << I18n.t('errors.messages.less_working_admin')
       throw(:abort)
     end
   end
