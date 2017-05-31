@@ -1,8 +1,7 @@
 <div class="col-md-3 col-md-offset-1">
   <h3><%= t('headline.home.calendar') %></h3>
   <%= form_tag(root_path, method: :get) do %>
-      <%= select_tag 'calendar_user_name', options_for_select(@users.pluck(:name)),
-                     prompt: @calendar_user.name %>
+      <%= select_tag 'calendar_user', options_for_select(@users.pluck(:name, :id), @calendar_user.id) %>
       <%= submit_tag t('button.change') %>
   <% end %>
 
