@@ -1,10 +1,10 @@
 <div class="col-md-3 col-md-offset-1">
   <h3><%= t('headline.home.calendar') %></h3>
-  <select class="form-control">
-    <% @users.each do |user| %>
-        <option><%= user.name %></option>
-    <% end %>
-  </select>
+  <%= form_tag(root_path, method: :get) do %>
+      <%= select_tag 'calendar[name]', options_for_select(@users.pluck(:name)) %>
+      <%= submit_tag 'submit' %>
+  <% end %>
+
 
   <%= month_calendar do |date| %>
       <% report = @reports.find_by(user: current_user, date: date) %>
