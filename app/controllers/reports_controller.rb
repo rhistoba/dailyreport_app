@@ -1,8 +1,6 @@
 class ReportsController < ApplicationController
-  before_action :confirm_login
   before_action :confirm_editable_user, only: [:edit, :update, :destroy]
   before_action :set_report, only: [:show, :edit, :update]
-  before_action :confirm_retire
 
   def show
     @comment = current_user.comments.build

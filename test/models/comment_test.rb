@@ -39,6 +39,10 @@ class CommentTest < ActiveSupport::TestCase
   test "comment must be deleted if associated user destroyed" do
     @comment.save
     assert @comment.valid?
+    # コメントしたユーザーが唯一の管理者で削除できないため、コメントされたユーザーを管理者とする
+    @user_be_commented.admin = true
+    @user_be_commented.password = @user_be_commented.password_confirmation = 'password'
+    @user_be_commented.save
     assert_difference 'Comment.count', -1 do
       @user_commented.destroy
     end

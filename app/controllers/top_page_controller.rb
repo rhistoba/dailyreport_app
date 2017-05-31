@@ -1,6 +1,4 @@
 class TopPageController < ApplicationController
-  before_action :confirm_login
-  before_action :confirm_retire
 
   def home
     @users = User.working

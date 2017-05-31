@@ -1,10 +1,6 @@
 class UsersController < ApplicationController
-  before_action :confirm_login
   before_action :confirm_admin, only: [:new, :create, :edit, :update, :destroy]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  before_action :confirm_retire
-  before_action :confirm_updatable, only: :update
-  before_action :confirm_deletable, only: :destroy
 
   def index
     if current_user.admin?
@@ -46,8 +42,11 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    @user.destroy
-    flash[:success] = t('flash.user.destroy.success')
+    if @user.destroy
+      flash[:success] = t('flash.user.destroy.success')
+    else
+      flash[:danger] = @user.errors.full_messages
+    end
     redirect_to users_path
   end
 
@@ -69,41 +68,4 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-  def confirm_updatable
-    if admin_to_not_admin? && less_admin_user?
-      flash[:danger] = t('flash.user.update.less_admin_user')
-      render 'edit'
-    elsif admin_working_to_retire_or_not_admin? && less_working_admin?
-      flash[:danger] = t('flash.user.update.less_working_admin')
-      render 'edit'
-    end
-  end
-
-  def confirm_deletable
-    if less_admin_user?
-      flash[:danger] = t('flash.user.destroy.less_admin_user')
-      redirect_to users_path
-    elsif less_working_admin?
-      flash[:danger] = t('flash.user.destroy.less_working_admin')
-      redirect_to users_path
-    end
-  end
-
-  def less_admin_user?
-    @user.admin? && User.where(admin: true).count <= 1
-  end
-
-  def less_working_admin?
-    @user.admin? && !@user.retire? &&
-        User.where(admin: true, retire: false).count <= 1
-  end
-
-  def admin_working_to_retire_or_not_admin?
-    @user.admin? && !@user.retire? &&
-        (user_params[:retire]=='true' || user_params[:admin]=='false')
-  end
-
-  def admin_to_not_admin?
-    @user.admin? && (user_params[:admin]=='false')
-  end
 end

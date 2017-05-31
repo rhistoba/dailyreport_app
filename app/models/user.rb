@@ -11,6 +11,8 @@ class User < ApplicationRecord
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }
   validates :department, presence: true, length: { maximum: 50 }
+  validate :confirm_updatable, on: :update
+  before_destroy :confirm_deletable
 
   scope :working, -> { where(retire: false) }
 
@@ -20,4 +22,26 @@ class User < ApplicationRecord
         BCrypt::Engine::MIN_COST : BCrypt::Engine.cost
     BCrypt::Password.create(string, cost: cost)
   end
+
+  private
+
+  def confirm_updatable
+    if (self.admin_was && !self.retire_was) &&
+        (!self.admin? || self.retire?) &&
+        less_working_admin?
+      self.errors[:base] << I18n.t('errors.messages.less_working_admin')
+    end
+  end
+
+  def confirm_deletable
+    if (self.admin? && !self.retire?) && less_working_admin?
+      self.errors[:base] << I18n.t('errors.messages.less_working_admin')
+      throw(:abort)
+    end
+  end
+
+  def less_working_admin?
+    User.where(admin: true, retire: false).count <= 1
+  end
+
 end

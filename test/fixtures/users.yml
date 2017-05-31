@@ -6,6 +6,7 @@ michael:
   password_digest: <%= User.digest('password') %>
   admin: true
   department: 'Management'
+  retire: false
 
 archer:
   name: Sterling Archer
@@ -13,6 +14,7 @@ archer:
   password_digest: <%= User.digest('password') %>
   admin: false
   department: 'Department'
+  retire: false
 
 retire:
   name: Retired Person
