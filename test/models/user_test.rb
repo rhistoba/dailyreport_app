@@ -5,7 +5,7 @@ class UserTest < ActiveSupport::TestCase
   def setup
     @user = User.new(name: "Example User", email: "user@example.com",
                      password: "foobar", password_confirmation: "foobar",
-                     department: "Management")
+                     department: "Management", admin: true, retire: false)
   end
 
   test "should be valid" do
@@ -59,5 +59,26 @@ class UserTest < ActiveSupport::TestCase
     @user.department = 'あ' * 51
     assert_not@user.valid?
   end
+
+  test 'working admin must be at least 1 person' do
+    assert_equal User.where(admin: true, retire: false).count,1
+    user = User.find_by(admin: true, retire: false)
+    user.password = user.password_confirmation = 'password'
+    assert user.valid?
+
+    user.admin = false
+    assert_not user.valid?
+    user.admin = true
+    assert user.valid?
+    user.retire = true
+    assert_not user.valid?
+
+    user.retire = false
+    assert user.valid?
+    assert_no_difference 'User.where(admin: true, retire: false).count' do
+      user.destroy
+    end
+  end
+
 
 end
