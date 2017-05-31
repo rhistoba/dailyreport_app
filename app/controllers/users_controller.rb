@@ -68,27 +68,17 @@ class UsersController < ApplicationController
   end
 
   def confirm_updatable
-    if admin_to_not_admin? && less_admin_user?
-      flash[:danger] = t('flash.user.update.less_admin_user')
-      render 'edit'
-    elsif admin_working_to_retire_or_not_admin? && less_working_admin?
+    if admin_working_to_retire_or_not_admin? && less_working_admin?
       flash[:danger] = t('flash.user.update.less_working_admin')
       render 'edit'
     end
   end
 
   def confirm_deletable
-    if less_admin_user?
-      flash[:danger] = t('flash.user.destroy.less_admin_user')
-      redirect_to users_path
-    elsif less_working_admin?
+    if less_working_admin?
       flash[:danger] = t('flash.user.destroy.less_working_admin')
       redirect_to users_path
     end
-  end
-
-  def less_admin_user?
-    @user.admin? && User.where(admin: true).count <= 1
   end
 
   def less_working_admin?
@@ -99,9 +89,5 @@ class UsersController < ApplicationController
   def admin_working_to_retire_or_not_admin?
     @user.admin? && !@user.retire? &&
         (user_params[:retire]=='true' || user_params[:admin]=='false')
-  end
-
-  def admin_to_not_admin?
-    @user.admin? && (user_params[:admin]=='false')
   end
 end

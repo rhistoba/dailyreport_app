@@ -98,11 +98,9 @@ ja:
       update:
         success: ユーザー情報を更新しました
         less_working_admin: 在職中の管理者は必ず1人以上必要です
-        less_admin_user: 管理者は必ず1人以上必要です
       destroy:
         success: ユーザーを削除しました
         less_working_admin: 在職中の管理者は必ず1人以上必要です
-        less_admin_user: 管理者は必ず1人以上必要です
     report:
       create:
         info: 新しい日報を作成しました
