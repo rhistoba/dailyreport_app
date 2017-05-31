@@ -68,6 +68,7 @@ ja:
   button:
     comment: コメントする
     login: ログイン
+    change: 変更する
 
   link_text:
     edit: 編集

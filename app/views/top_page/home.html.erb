@@ -1,12 +1,13 @@
 <div class="col-md-3 col-md-offset-1">
   <h3><%= t('headline.home.calendar') %></h3>
   <%= form_tag(root_path, method: :get) do %>
-      <%= select_tag 'calendar[name]', options_for_select(@users.pluck(:name)) %>
-      <%= submit_tag 'submit' %>
+      <%= select_tag 'calendar_user_name', options_for_select(@users.pluck(:name)),
+                     prompt: @calendar_user.name %>
+      <%= submit_tag t('button.change') %>
   <% end %>
 
   <%= month_calendar do |date| %>
-      <% report = @reports.find_by(user: current_user, date: date) %>
+      <% report = @reports.find_by(user: @calendar_user, date: date) %>
       <% if report %>
           <u>
             <%= link_to date.day, report_path(report), remote: true %>
