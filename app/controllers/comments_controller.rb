@@ -1,8 +1,6 @@
 class CommentsController < ApplicationController
-  before_action :confirm_login
   before_action :confirm_editable_user, only: :destroy
   before_action :set_report
-  before_action :confirm_retire
 
   def create
     @comment = @report.comments.build(comment_params)

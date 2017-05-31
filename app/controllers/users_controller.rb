@@ -1,8 +1,6 @@
 class UsersController < ApplicationController
-  before_action :confirm_login
   before_action :confirm_admin, only: [:new, :create, :edit, :update, :destroy]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  before_action :confirm_retire
   before_action :confirm_updatable, only: :update
   before_action :confirm_deletable, only: :destroy
 

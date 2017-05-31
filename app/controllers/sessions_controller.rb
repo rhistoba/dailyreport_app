@@ -1,4 +1,7 @@
 class SessionsController < ApplicationController
+  skip_before_action :confirm_login
+  skip_before_action :confirm_retire
+
   def new
   end
 
