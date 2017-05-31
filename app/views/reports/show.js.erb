@@ -1,0 +1,5 @@
+$("#report-content").html("<%= j(render 'shared/report') %>");
+var t = "<%= j(t('activerecord.models.comment') + ": #{@report.comments.count}") %>";
+t = t + ' | '
+t = t + "<%= j(link_to t('link_text.jump_to_report_page'), report_path(@report)) %>";
+$("#report-comments-link").html(t);

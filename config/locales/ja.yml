@@ -54,6 +54,8 @@ ja:
   headline:
     home:
       new_report: 新着日報
+      calendar: カレンダー
+      report_content: 日報の内容
     user:
       show:
         info: ユーザー情報
@@ -66,10 +68,12 @@ ja:
   button:
     comment: コメントする
     login: ログイン
+    change: 変更する
 
   link_text:
     edit: 編集
     delete: 削除
+    jump_to_report_page: この日報のページに移動する
 
   table_column:
     comment_num: コメント数

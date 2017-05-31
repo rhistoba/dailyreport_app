@@ -36,7 +36,7 @@ end
 
 users = User.order(:created_at).take(10)
 users.each do |user|
-  date = Time.local(2016,12,31)
+  date = Time.local(2017,4,30)
   50.times do
     date = date.next_day
     title = Faker::Lorem.sentence(1)

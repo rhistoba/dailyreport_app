@@ -1,3 +1,31 @@
+<div class="col-md-3 col-md-offset-1">
+  <h3><%= t('headline.home.calendar') %></h3>
+  <%= form_tag(root_path, method: :get) do %>
+      <%= select_tag 'calendar_user', options_for_select(@users.pluck(:name, :id), @calendar_user.id) %>
+      <%= submit_tag t('button.change') %>
+  <% end %>
+
+  <%= month_calendar do |date| %>
+      <% report = @reports.find_by(user: @calendar_user, date: date) %>
+      <% if report %>
+          <u>
+            <%= link_to date.day, report_path(report), remote: true %>
+          </u>
+      <% else %>
+          <%= date.day %>
+      <% end %>
+  <% end %>
+</div>
+
+<div class="col-md-7">
+  <h3><%= t('headline.home.report_content') %></h3>
+  <table class="table">
+    <tbody id="report-content">
+    </tbody>
+  </table>
+  <div id="report-comments-link"></div>
+</div>
+
 <div class="col-md-10 col-md-offset-1">
   <h3><%= t('headline.home.new_report') %></h3>
   <table class="table table-striped">
@@ -13,5 +41,4 @@
     <%= render @reports %>
     </tbody>
   </table>
-  <%= will_paginate @reports %>
 </div>

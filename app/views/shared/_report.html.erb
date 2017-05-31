@@ -1,0 +1,16 @@
+<tr>
+  <th width="120"><%= t('activerecord.attributes.report.title') %></th>
+  <td><%= @report.title %></td>
+</tr>
+<tr>
+  <th><%= t('activerecord.attributes.user.name') %></th>
+  <td><%= @report.user.name %></td>
+</tr>
+<tr>
+  <th><%= t('activerecord.attributes.report.date') %></th>
+  <td><%= @report.date %></td>
+</tr>
+<tr>
+  <th><%= t('activerecord.attributes.report.content') %></th>
+  <td><%= simple_format(h(@report.content)) %></td>
+</tr>
