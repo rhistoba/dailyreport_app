@@ -1,7 +1,9 @@
 require 'test_helper'
 
 class TopPageControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
+
+  def setup
+    @admin_user = users(:michael)
+  end
+
 end

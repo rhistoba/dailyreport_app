@@ -13,14 +13,14 @@
     </thead>
     <tbody>
     <% @users.each do |user| %>
-    <tr>
-      <td><%= link_to user.name, user_path(user) %></td>
-      <% if current_user.admin? %>
-          <td><%= link_to t('link_text.edit'), edit_user_path(user) %></td>
-          <td><%= link_to t('link_text.delete'), user_path(user), method: 'delete',
-                          data: { confirm: t('confirm.delete') } %></td>
-      <% end %>
-    </tr>
+        <tr>
+          <td><%= link_to user.name, user_path(user) %></td>
+          <% if current_user.admin? %>
+              <td><%= link_to t('link_text.edit'), edit_user_path(user) %></td>
+              <td><%= link_to t('link_text.delete'), user_path(user), method: 'delete',
+                              data: { confirm: t('confirm.delete') } %></td>
+          <% end %>
+        </tr>
     <% end %>
     </tbody>
   </table>

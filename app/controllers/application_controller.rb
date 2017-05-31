@@ -2,6 +2,9 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include SessionsHelper
 
+  before_action :confirm_login
+  before_action :confirm_retire
+
   private
 
   # ユーザーのログインを確認する
@@ -9,5 +12,10 @@ class ApplicationController < ActionController::Base
     unless logged_in?
       redirect_to login_path
     end
+  end
+
+  # ユーザーが退職者かどうか確認する
+  def confirm_retire
+    redirect_to login_path if current_user.retire?
   end
 end

@@ -60,4 +60,5 @@ class ReportsControllerTest < ActionDispatch::IntegrationTest
       delete report_path(report)
     end
   end
+
 end

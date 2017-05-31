@@ -19,4 +19,10 @@ class HomePageTest < ActionDispatch::IntegrationTest
     end
   end
 
+  test 'not show retire user reports' do
+    log_in_as(@user1, 'password')
+    get root_path
+
+  end
+
 end

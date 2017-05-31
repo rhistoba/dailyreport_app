@@ -37,4 +37,5 @@ class CommentsControllerTest < ActionDispatch::IntegrationTest
       delete report_comment_path(@report, @comment), xhr: true
     end
   end
+
 end

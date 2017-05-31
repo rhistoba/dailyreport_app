@@ -16,5 +16,19 @@
     <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation, class: 'form-control' %>
 
+    <div class="checkbox">
+      <label>
+        <%= f.check_box :admin, {}, "true", "false" %><%= t('checkbox.user.admin') %>
+      </label>
+    </div>
+
+    <% if params[:action] == 'edit' %>
+        <div class="checkbox">
+          <label>
+            <%= f.check_box :retire, {}, "true", "false" %><%= t('checkbox.user.retire') %>
+          </label>
+        </div>
+    <% end %>
+
     <%= f.submit class: "btn btn-primary" %>
 <% end %>

@@ -1,13 +1,17 @@
 class UsersController < ApplicationController
-  before_action :confirm_login
   before_action :confirm_admin, only: [:new, :create, :edit, :update, :destroy]
-  before_action :set_user, only: [:show, :edit, :update]
+  before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   def index
-    @users = User.paginate(page: params[:page])
+    if current_user.admin?
+      @users = User.paginate(page: params[:page])
+    else
+      @users = User.working.paginate(page: params[:page])
+    end
   end
 
   def show
+    confirm_admin if @user.retire?
     @reports = @user.reports.order(date: :desc).paginate(page: params[:page])
   end
 
@@ -38,8 +42,11 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    User.find(params[:id]).destroy
-    flash[:success] = t('flash.user.destroy.success')
+    if @user.destroy
+      flash[:success] = t('flash.user.destroy.success')
+    else
+      flash[:danger] = @user.errors.full_messages
+    end
     redirect_to users_path
   end
 
@@ -47,7 +54,8 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(
-        :name, :email, :password, :password_confirmation, :department)
+        :name, :email, :password, :password_confirmation,
+        :department, :admin, :retire)
   end
 
   # beforeアクション

@@ -5,6 +5,7 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
   def setup
     @user = users(:michael)
     @other_user = users(:archer)
+    @user_retired = users(:retire)
   end
 
   test "login with invalid information" do
@@ -30,6 +31,13 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
   test "should not show home page without login" do
     get root_path
     assert_redirected_to login_path
+  end
+
+  test 'retired user cannot login' do
+    assert @user_retired.retire?
+    post login_path, params: { session: { email: @user_retired.email, password: 'password' } }
+    assert_template 'sessions/new'
+    assert_match 'そのユーザーは退職済みのためログインできません', response.body
   end
 
 end

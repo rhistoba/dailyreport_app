@@ -7,6 +7,7 @@ ja:
       too_short: "%{attribute}が短すぎます"
       too_long: "%{attribute}が長すぎます"
       confirmation: "%{attribute}が一致していません"
+      less_working_admin: "在職中の管理者は1人以上必要です"
 
   activemodel:
     attributes:
@@ -30,6 +31,7 @@ ja:
         password_confirmation: パスワード確認
         admin: 管理者
         department: 所属部署
+        retire: 退職者
 
       report:
         date: 日付
@@ -82,6 +84,11 @@ ja:
     comment:
       content: コメントを入力してください
 
+  checkbox:
+    user:
+      admin: このユーザーを管理者とする
+      retire: このユーザーを退職者とする
+
   flash:
     errors:
       form: 入力エラー
@@ -91,8 +98,10 @@ ja:
         info: 新しいユーザーを作成しました
       update:
         success: ユーザー情報を更新しました
+        less_working_admin: 在職中の管理者は必ず1人以上必要です
       destroy:
         success: ユーザーを削除しました
+        less_working_admin: 在職中の管理者は必ず1人以上必要です
     report:
       create:
         info: 新しい日報を作成しました
@@ -109,6 +118,7 @@ ja:
     session:
       create:
         danger: メールアドレスまたはパスワードが正しくありません
+        retire: そのユーザーは退職済みのためログインできません
 
   helpers:
     submit:
