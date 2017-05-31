@@ -68,22 +68,17 @@ class UsersController < ApplicationController
   end
 
   def confirm_updatable
-    if admin_working_to_retire_or_not_admin? && less_working_admin?
+    if admin_working_to_retire_or_not_admin? && @user.less_working_admin?
       flash[:danger] = t('flash.user.update.less_working_admin')
       render 'edit'
     end
   end
 
   def confirm_deletable
-    if less_working_admin?
+    if @user.less_working_admin?
       flash[:danger] = t('flash.user.destroy.less_working_admin')
       redirect_to users_path
     end
-  end
-
-  def less_working_admin?
-    @user.admin? && !@user.retire? &&
-        User.where(admin: true, retire: false).count <= 1
   end
 
   def admin_working_to_retire_or_not_admin?

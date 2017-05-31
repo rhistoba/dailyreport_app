@@ -20,4 +20,10 @@ class User < ApplicationRecord
         BCrypt::Engine::MIN_COST : BCrypt::Engine.cost
     BCrypt::Password.create(string, cost: cost)
   end
+
+  def less_working_admin?
+    self.admin? && !self.retire? &&
+        User.where(admin: true, retire: false).count <= 1
+  end
+
 end
