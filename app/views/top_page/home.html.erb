@@ -5,7 +5,6 @@
       <%= submit_tag 'submit' %>
   <% end %>
 
-
   <%= month_calendar do |date| %>
       <% report = @reports.find_by(user: current_user, date: date) %>
       <% if report %>
