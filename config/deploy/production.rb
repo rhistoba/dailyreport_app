@@ -7,11 +7,11 @@
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 
-server 'your_site.com', user: 'stoba', roles: %w{app db web}
-set :unicorn_pid, "/var/www/#{fetch(:application)}/shared/tmp/pids/unicorn.pid"
+server '192.168.56.100', user: 'stoba', roles: %w{app db web}
+#set :unicorn_pid, "/var/www/#{fetch(:application)}/shared/tmp/pids/unicorn.pid"
 set :stage, :production # これいらないかも。
 set :unicorn_rack_env, 'production'
-set :unicorn_config_path, "/var/www/#{fetch(:application)}/current/config/unicorn/production.rb"
+#set :unicorn_config_path, "/var/www/#{fetch(:application)}/current/config/unicorn/production.rb"
 set :rails_env, 'production'
 set :branch, 'master'
 

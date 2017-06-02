@@ -18,6 +18,7 @@ gem 'turbolinks',   '5.0.1'
 gem 'jbuilder',     '2.4.1'
 gem "simple_calendar", "~> 2.0"
 gem 'unicorn'
+gem 'therubyracer', :platform => :ruby
 
 group :development, :test do
   gem 'sqlite3', '1.3.11'

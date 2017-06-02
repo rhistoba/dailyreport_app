@@ -6,7 +6,7 @@ set :application, 'your_site.com'
 set :repo_url, 'git@github.com:rhistoba/dailyreport_app.git'
 set :rbenv_ruby, '2.3.4'
 set :rbenv_type, :user
-set :deploy_to, "/var/www/#{fetch(:application)}"
+set :deploy_to, "/home/stoba/#{fetch(:application)}"
 
 shared_path = "#{fetch(:deploy_to)}/shared"
 release_path = "#{fetch(:deploy_to)}/current"
