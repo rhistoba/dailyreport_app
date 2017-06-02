@@ -1,5 +1,5 @@
 # path
-app_path = '/var/www/your_site.com'
+app_path = '/home/stoba/your_site.com'
 current_path = "#{app_path}/current"
 shared_path = "#{app_path}/shared"
 
